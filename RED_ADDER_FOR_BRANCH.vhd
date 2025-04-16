@@ -10,3 +10,8 @@ entity RED_ADDER_FOR_BRANCH is
         RED_BRANCH_ADDER   : out STD_LOGIC_VECTOR(31 downto 0)
     );
 end RED_ADDER_FOR_BRANCH;
+
+architecture Behavioral of RED_ADDER_FOR_BRANCH is
+	begin
+		RED_BRANCH_ADDER <= std_logic_vector(unsigned(RED_PC_P4) + unsigned(RED_OFFSET));
+END Behavioral;
