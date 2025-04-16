@@ -1,0 +1,24 @@
+# Quartus generated files and directories
+output_files/
+db/
+incremental_db/
+
+# Compiled outputs and device programming files
+*.sof
+*.jdi
+*.pin
+
+# Report files (rpt, qmsg, asm, fit etc.)
+*.rpt
+*.qmsg
+*.asm
+*.fit
+*.smsg
+
+# Backup and temporary files
+*.bak
+*.tmp
+
+# Other irrelevant files (e.g. images, dumps)
+c5_pin_model_dump.txt
+WhatsApp Image*.jpg
