@@ -38,18 +38,18 @@ component RED_ALU
     );
 end component;
 
-component RED_ALU_CONTROL_UNIT
-    Port (
-        RED_ALU_OP     : in  STD_LOGIC_VECTOR(1 downto 0);
-        RED_FUNCT      : in  STD_LOGIC_VECTOR(5 downto 0);   -- FOR RED_INSTRUCTION[5:0]
-        RED_ALU_CTRL   : out STD_LOGIC_VECTOR(3 downto 0)    -- ALU OPERATION CODE
-    );
-end component;
+--component RED_ALU_CONTROL_UNIT
+    --Port (
+        --RED_ALU_OP     : in  STD_LOGIC_VECTOR(1 downto 0);
+        --RED_FUNCT      : in  STD_LOGIC_VECTOR(5 downto 0);   -- FOR RED_INSTRUCTION[5:0]
+        --RED_ALU_CTRL   : out STD_LOGIC_VECTOR(3 downto 0)    -- ALU OPERATION CODE
+    --);
+--end component;
 
 component RED_CONTROL_UNIT 
     Port (
-        RED_OPCODE       : in  STD_LOGIC_VECTOR(5 downto 0);
-		  RED_ALU_OP       : out STD_LOGIC_VECTOR(1 downto 0);
+        RED_OPCODE       : in  STD_LOGIC_VECTOR(6 downto 0);
+		  RED_ALU_OP       : out STD_LOGIC_VECTOR(3 downto 0);
 		  RED_ALU_SRC      : out STD_LOGIC;
 		  RED_BRANCH       : out STD_LOGIC;
         RED_REG_DST      : out STD_LOGIC;

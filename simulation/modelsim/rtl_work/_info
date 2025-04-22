@@ -1,0 +1,51 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d//wsl.localhost/Ubuntu/home/gaith/red/simulation/modelsim
+Ered_control_unit
+Z1 w1745276736
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8//wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd
+Z6 F//wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd
+l0
+L5
+VIj:U6E2[BPOczE8mffZK21
+!s100 IffU9MG6@]4fWRQ0P]F?N0
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1745277154
+!i10b 1
+Z9 !s108 1745277153.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd|
+Z11 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+DEx4 work 16 red_control_unit 0 22 Ij:U6E2[BPOczE8mffZK21
+l20
+L19
+VAbmI]H88Z:z<52Rf@@`FC3
+!s100 o<`azjf[U34MVmf3Jdc^T1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
