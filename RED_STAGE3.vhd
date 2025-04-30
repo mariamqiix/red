@@ -36,6 +36,8 @@ entity RED_STAGE3 is
     );
 end RED_STAGE3;
 
+
+
 architecture Behavioral of RED_STAGE3 is
 
     signal RED_SHIFTED_OFFSET : STD_LOGIC_VECTOR(63 downto 0);
