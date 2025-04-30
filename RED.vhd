@@ -26,49 +26,14 @@ architecture Behavioral of RED is
 
 
 
-component RED_DATA_MEM 
-    Port (
-	     RED_MEM_WRITE   : in  STD_LOGIC;
-        RED_MEM_READ    : in  STD_LOGIC;
-        RED_ADDRESS     : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_WRITE_DATA  : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_DATA        : out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component;
-
-
-
-
-
-
-component RED_MUX_FOR_MEM_TO_REG 
-    Port (
-        RED_SELECT         : in  STD_LOGIC;
-        RED_ALU_RESULTS    : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_MEM_DATA       : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_OUTPUT         : out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component;
-
-
-component RED_MUX_FOR_RED_PC
-    Port (
-	     RED_SELECT         : in  STD_LOGIC;
-        RED_SIGNAL_PC_P4   : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_BRAMCH_ADD     : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_OUTPUT         : out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component;
-
-
-component RED_MUX_FOR_REG_DST 
-    Port (
-	     RED_SELECT     : in  STD_LOGIC;
-        RED_RT         : in  STD_LOGIC_VECTOR(4 downto 0);   -- FOR RED_INSTRUCTION[20:16]
-        RED_RD         : in  STD_LOGIC_VECTOR(4 downto 0);   -- FOR RED_INSTRUCTION[15:11]
-        RED_OUTPUT     : out STD_LOGIC_VECTOR(4 downto 0)
-    );
-end component;
+--component RED_MUX_FOR_REG_DST 
+    --Port (
+	     --RED_SELECT     : in  STD_LOGIC;
+        --RED_RT         : in  STD_LOGIC_VECTOR(4 downto 0);   -- FOR RED_INSTRUCTION[20:16]
+        --RED_RD         : in  STD_LOGIC_VECTOR(4 downto 0);   -- FOR RED_INSTRUCTION[15:11]
+        --RED_OUTPUT     : out STD_LOGIC_VECTOR(4 downto 0)
+    --);
+--end component;
 
 
 
