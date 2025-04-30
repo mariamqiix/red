@@ -10,48 +10,134 @@
 # Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd}
+# vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:12:33 on Apr 22,2025
-# vcom -reportprogress 300 -93 -work work //wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd 
+# Start time: 10:05:34 on Apr 30,2025
+# vcom -reportprogress 300 -93 -work work //wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity RED_CONTROL_UNIT
-# -- Compiling architecture Behavioral of RED_CONTROL_UNIT
-# End time: 02:12:34 on Apr 22,2025, Elapsed time: 0:00:01
+# -- Compiling entity RED_SL_BY_1
+# -- Compiling architecture Behavioral of RED_SL_BY_1
+# End time: 10:05:35 on Apr 30,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_ALU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:05:35 on Apr 30,2025
+# vcom -reportprogress 300 -93 -work work //wsl.localhost/Ubuntu/home/gaith/red/RED_ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RED_ALU
+# -- Compiling architecture Behavioral of RED_ALU
+# End time: 10:05:36 on Apr 30,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:05:36 on Apr 30,2025
+# vcom -reportprogress 300 -93 -work work //wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RED_MUX_FOR_ALU_SRC
+# -- Compiling architecture Behavioral of RED_MUX_FOR_ALU_SRC
+# End time: 10:05:37 on Apr 30,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_FOR_BRANCH.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:05:37 on Apr 30,2025
+# vcom -reportprogress 300 -93 -work work //wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_FOR_BRANCH.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RED_ADDER_FOR_BRANCH
+# -- Compiling architecture Behavioral of RED_ADDER_FOR_BRANCH
+# End time: 10:05:37 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:05:37 on Apr 30,2025
+# vcom -reportprogress 300 -93 -work work //wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RED_STAGE3
+# -- Compiling architecture Behavioral of RED_STAGE3
+# End time: 10:05:38 on Apr 30,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-vsim work.red_control_unit
-# vsim work.red_control_unit 
-# Start time: 02:12:56 on Apr 22,2025
+vsim work.red_stage3
+# vsim work.red_stage3 
+# Start time: 10:05:58 on Apr 30,2025
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.red_control_unit(behavioral)
-# Trace back: Error QStructure::sort: invalid command name ""
-#   <6:proc:11: ::QStructure::sort .main_pane.structure 0 ascending
-#   <5:eval:1: ::QStructure::structsort .main_pane.structure 0 ascending
-#   <4:eval:1: ::namespace inscope ::QStructure {structsort .main_pane.structure} 0 ascending
-#   >3:proc:26: ::.main_pane.structure.interior.cs.body.struct sort 0 ascending
-#   >2:proc:10: ::.main_pane.structure.interior.cs.body.struct _initializeSortColumn
-#   <1:eval:1: ::namespace inscope ::vsimwidgets::Hierarchy {::.main_pane.structure.interior.cs.body.struct _initializeSortColumn}
-add wave -position end  sim:/red_control_unit/RED_OPCODE
-add wave -position end  sim:/red_control_unit/RED_ALU_OP
-add wave -position end  sim:/red_control_unit/RED_ALU_SRC
-add wave -position end  sim:/red_control_unit/RED_BRANCH
-add wave -position end  sim:/red_control_unit/RED_REG_DST
-add wave -position end  sim:/red_control_unit/RED_MEM_TO_Reg
-add wave -position end  sim:/red_control_unit/RED_REG_WRITE
-add wave -position end  sim:/red_control_unit/RED_MEM_READ
-add wave -position end  sim:/red_control_unit/RED_MEM_WRITE
-force -freeze sim:/red_control_unit/RED_OPCODE 0000011 0
+# Loading work.red_stage3(behavioral)
+# Loading work.red_sl_by_1(behavioral)
+# Loading work.red_adder_for_branch(behavioral)
+# Loading work.red_mux_for_alu_src(behavioral)
+# Loading work.red_alu(behavioral)
+add wave -position end  sim:/red_stage3/RED_PC_IN
+add wave -position end  sim:/red_stage3/RED_READ_DATA1_IN
+add wave -position end  sim:/red_stage3/RED_READ_DATA2_IN
+add wave -position end  sim:/red_stage3/RED_IMMEDIATE_IN
+add wave -position end  sim:/red_stage3/RED_INSTRUCTION_IN
+add wave -position end  sim:/red_stage3/RED_ALU_SRC_IN
+add wave -position end  sim:/red_stage3/RED_BRANCH_IN
+add wave -position end  sim:/red_stage3/RED_MEM_TO_REG_IN
+add wave -position end  sim:/red_stage3/RED_MEM_READ_IN
+add wave -position end  sim:/red_stage3/RED_MEM_WRITE_IN
+add wave -position end  sim:/red_stage3/RED_REG_WRITE_CTRL_IN
+add wave -position end  sim:/red_stage3/RED_ALU_OP_IN
+add wave -position end  sim:/red_stage3/RED_ALU_INPUT_B
+add wave -position end  sim:/red_stage3/RED_BRANCH_TARGET
+add wave -position end  sim:/red_stage3/RED_INSTRUCTION_OUT
+add wave -position end  sim:/red_stage3/RED_ALU_RESULTS
+add wave -position end  sim:/red_stage3/RED_ALU_ZERO
+add wave -position end  sim:/red_stage3/RED_BRANCH
+add wave -position end  sim:/red_stage3/RED_MEM_TO_REG
+add wave -position end  sim:/red_stage3/RED_MEM_READ
+add wave -position end  sim:/red_stage3/RED_MEM_WRITE
+add wave -position end  sim:/red_stage3/RED_REG_WRITE_CTRL
+add wave -position end  sim:/red_stage3/RED_SHIFTED_OFFSET
+add wave -position end  sim:/red_stage3/RED_ALU_INPUT_B_INT
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lolde  Hostname: GAITH  ProcessID: 43484
+#           Attempting to use alternate WLF file "./wlft17dwnx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft17dwnx
+force -freeze sim:/red_stage3/RED_PC_IN 0000000000000000000000000000000000000000000000000000000000000100 0
+force -freeze sim:/red_stage3/RED_READ_DATA1_IN 00000000000000000000000000001010 0
+force -freeze sim:/red_stage3/RED_READ_DATA2_IN 00000000000000000000000000010100 0
+force -freeze sim:/red_stage3/RED_IMMEDIATE_IN 00000000000000000000000000000000 0
+# Value length (32) does not equal array index length (64).
+# 
+# ** Error: (vsim-4011) Invalid force value: 00000000000000000000000000000000 0.
+# 
+force -freeze sim:/red_stage3/RED_ALU_SRC_IN 0 0
+force -freeze sim:/red_stage3/RED_BRANCH_IN 0 0
+force -freeze sim:/red_stage3/RED_MEM_TO_REG_IN 0 0
+force -freeze sim:/red_stage3/RED_MEM_READ_IN 0 0
+force -freeze sim:/red_stage3/RED_MEM_WRITE_IN 0 0
+force -freeze sim:/red_stage3/RED_REG_WRITE_CTRL_IN 1 0
+force -freeze sim:/red_stage3/RED_ALU_OP_IN 0010 0
 run
-force -freeze sim:/red_control_unit/RED_OPCODE 0000010 0
+force -freeze sim:/red_stage3/RED_READ_DATA1_IN 00000000000000000000000000000101 0
+force -freeze sim:/red_stage3/RED_READ_DATA2_IN 00000000000000000000000000001010 0
+force -freeze sim:/red_stage3/RED_IMMEDIATE_IN 00000000000000000000000000000010 0
+# Value length (32) does not equal array index length (64).
+# 
+# ** Error: (vsim-4011) Invalid force value: 00000000000000000000000000000010 0.
+# 
+force -freeze sim:/red_stage3/RED_BRANCH_IN 1 0
+force -freeze sim:/red_stage3/RED_ALU_OP_IN 0001 0
+force -freeze sim:/red_stage3/RED_IMMEDIATE_IN 0000000000000000000000000000000000000000000000000000000000000010 0
 run
-force -freeze sim:/red_control_unit/RED_OPCODE 0100011 0
-run
-# End time: 02:14:08 on Apr 22,2025, Elapsed time: 0:01:12
-# Errors: 14, Warnings: 0
+# End time: 10:13:57 on Apr 30,2025, Elapsed time: 0:07:59
+# Errors: 2, Warnings: 2

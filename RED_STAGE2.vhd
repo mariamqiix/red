@@ -89,8 +89,8 @@ begin
     RF: RED_REGISTER_FILE
         Port map (
             RED_REG_WRITE  => RED_REG_WRITE_IN,
-            RED_REG1       => RED_INSTRUCTION(25 downto 21),
-            RED_REG2       => RED_INSTRUCTION(20 downto 16),
+            RED_REG1       => RED_INSTRUCTION(19 downto 15),
+            RED_REG2       => RED_INSTRUCTION(24 downto 20),
             RED_WRITE_REG  => RED_WRITE_REG,
             RED_WRITE_DATA => RED_WRITE_DATA,
             RED_DATA1      => RED_DATA1,

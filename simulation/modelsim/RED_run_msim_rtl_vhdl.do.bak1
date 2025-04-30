@@ -1,0 +1,13 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_PC.vhd}
+vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_INST_MEM.vhd}
+vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_RED_PC.vhd}
+vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_PC_P4.vhd}
+vcom -93 -work work {//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE1.vhd}
+

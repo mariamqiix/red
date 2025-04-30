@@ -11,26 +11,10 @@ end RED;
 architecture Behavioral of RED is
 
 
-component  RED_ADDER_FOR_BRANCH 
-    Port (
-        RED_PC_P4          : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_OFFSET         : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_BRANCH_ADDER   : out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component ;
 
 
 
 
-component RED_ALU 
-    Port (
-        RED_INPUT_A       : in  STD_LOGIC_VECTOR(31 downto 0);  -- Operand 1
-        RED_INPUT_B       : in  STD_LOGIC_VECTOR(31 downto 0);  -- Operand 2
-        RED_ALU_CTRL      : in  STD_LOGIC_VECTOR(3 downto 0);   -- Control from RED_ALU_CONTROL_UNIT
-        RED_ALU_RESULTS   : out STD_LOGIC_VECTOR(31 downto 0);
-        RED_ALU_ZERO      : out STD_LOGIC
-    );
-end component;
 
 --component RED_ALU_CONTROL_UNIT
     --Port (
@@ -55,14 +39,7 @@ end component;
 
 
 
-component RED_MUX_FOR_ALU_SRC
-    Port (
-        RED_SELECT    : in  STD_LOGIC;
-        RED_INPUT_A   : in  STD_LOGIC_VECTOR(31 downto 0);  -- ReadData2
-        RED_INPUT_B   : in  STD_LOGIC_VECTOR(31 downto 0);  -- Immediate
-        RED_OUTPUT    : out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component;
+
 
 component RED_MUX_FOR_MEM_TO_REG 
     Port (
@@ -101,12 +78,6 @@ end component;
 
 
 
-component RED_SL_BY_1 
-    Port (
-        RED_INPUT  : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_OUTPUT : out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component;
 begin
     process(RED_INPUT,RED_CLOCK)
     begin

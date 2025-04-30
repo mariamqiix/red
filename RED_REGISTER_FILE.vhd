@@ -15,18 +15,17 @@ entity RED_REGISTER_FILE is
 end RED_REGISTER_FILE;
 
 architecture Behavioral of RED_REGISTER_FILE is
-    type RED_REGISTER_Array is array(0 to 31) of std_logic_vector(31 downto 0);
-    signal RED_REGISTER : RED_REGISTER_Array;
+    type RED_REGISTER_Array is array(31 downto 0) of std_logic_vector(31 downto 0);
+    signal RED_REGISTER : RED_REGISTER_Array := (others => (others => '0'));
 begin
 
-    process(RED_REG_WRITE, RED_WRITE_REG, RED_WRITE_DATA)
+    process(RED_REG_WRITE)
     begin
         if RED_REG_WRITE = '1' then
             RED_REGISTER(to_integer(unsigned(RED_WRITE_REG))) <= RED_WRITE_DATA;
         end if;
     end process;
 
-    -- Combinational read
     RED_DATA1 <= RED_REGISTER(to_integer(unsigned(RED_REG1)));
     RED_DATA2 <= RED_REGISTER(to_integer(unsigned(RED_REG2)));
 

@@ -83,7 +83,7 @@ begin
     -- RED_INST_MEM: Uses only lower 8 bits of PC
     U3: RED_INST_MEM
         Port map (
-            RED_ADDRESS     => internal_red_address(7 downto 0),
+            RED_ADDRESS     => internal_red_address(9 downto 2),
             RED_INSTRUCTION => RED_INSTRUCTION
         );
 
