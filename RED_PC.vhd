@@ -4,14 +4,14 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity RED_PC is
     Port (
-        RED_INPUT : in  STD_LOGIC_VECTOR(7 downto 0);
-        RED_ADDRESS : out STD_LOGIC_VECTOR(7 downto 0)
+        RED_INPUT : in  STD_LOGIC_VECTOR(63 downto 0);
+        RED_ADDRESS : out STD_LOGIC_VECTOR(63 downto 0)
     );
 end RED_PC;
 
 architecture Behavioral of RED_PC is
 
-    signal PC : STD_LOGIC_VECTOR(7 downto 0);
+    signal PC : STD_LOGIC_VECTOR(63 downto 0);
 	 
 begin
 

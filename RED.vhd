@@ -20,12 +20,6 @@ component  RED_ADDER_FOR_BRANCH
 end component ;
 
 
-component RED_ADDER_FOR_PC_P4
-    Port (
-        RED_PC       : in  STD_LOGIC_VECTOR(31 downto 0);
-        RED_PC_P4    : out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component;
 
 
 component RED_ALU 
@@ -46,19 +40,7 @@ end component;
     --);
 --end component;
 
-component RED_CONTROL_UNIT 
-    Port (
-        RED_OPCODE       : in  STD_LOGIC_VECTOR(6 downto 0);
-		  RED_ALU_OP       : out STD_LOGIC_VECTOR(3 downto 0);
-		  RED_ALU_SRC      : out STD_LOGIC;
-		  RED_BRANCH       : out STD_LOGIC;
-        RED_REG_DST      : out STD_LOGIC;
-        RED_MEM_TO_Reg   : out STD_LOGIC;
-        RED_REG_WRITE    : out STD_LOGIC;
-        RED_MEM_READ     : out STD_LOGIC;
-        RED_MEM_WRITE    : out STD_LOGIC
-    );
-end component;
+
 
 component RED_DATA_MEM 
     Port (
@@ -70,12 +52,7 @@ component RED_DATA_MEM
     );
 end component;
 
-component RED_INST_MEM
-    Port (
-        RED_ADDRESS    : in  STD_LOGIC_VECTOR(7 downto 0);
-        RED_INSTRUCTION : out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component;
+
 
 
 component RED_MUX_FOR_ALU_SRC
@@ -117,32 +94,11 @@ component RED_MUX_FOR_REG_DST
 end component;
 
 
-component RED_PC 
-    Port (
-        RED_INPUT : in  STD_LOGIC_VECTOR(7 downto 0);
-        RED_ADDRESS : out STD_LOGIC_VECTOR(7 downto 0)
-    );
-end component;
 
 
-component RED_REGISTER_FILE
-    Port (
-		  RED_REG_WRITE      : in  STD_LOGIC;
-        RED_REG1      		: in  STD_LOGIC_VECTOR(4 downto 0);   -- FOR RED_INSTRUCTION[25:21]
-        RED_REG2      		: in  STD_LOGIC_VECTOR(4 downto 0);   -- FOR RED_INSTRUCTION[20:16]
-        RED_WRITE_REG      : in  STD_LOGIC_VECTOR(4 downto 0);   -- RED_INSTRUCTION[15–11] OR RED_INSTRUCTION[20–16] based on RED_REG_DST
-        RED_WRITE_DATA     : in  STD_LOGIC_VECTOR(31 downto 0);  -- ALU OR MEM
-        RED_DATA1     		: out STD_LOGIC_VECTOR(31 downto 0);
-        RED_DATA2     		: out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component;
 
-component RED_SIGN_EXTEND 
-    Port (
-        RED_IMM    			: in  STD_LOGIC_VECTOR(15 downto 0);   -- FOR RED_INSTRUCTION[25:21]
-        RED_EXTENDET_IMM   : out STD_LOGIC_VECTOR(31 downto 0)
-    );
-end component;
+
+
 
 
 component RED_SL_BY_1 

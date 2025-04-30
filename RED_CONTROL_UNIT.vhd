@@ -8,7 +8,6 @@ entity RED_CONTROL_UNIT is
         RED_ALU_OP       : out STD_LOGIC_VECTOR(3 downto 0);
         RED_ALU_SRC      : out STD_LOGIC;
         RED_BRANCH       : out STD_LOGIC;
-        RED_REG_DST      : out STD_LOGIC;
         RED_MEM_TO_Reg   : out STD_LOGIC;
         RED_REG_WRITE    : out STD_LOGIC;
         RED_MEM_READ     : out STD_LOGIC;
@@ -34,7 +33,6 @@ begin
         RED_ALU_OP      <= "0000";
         RED_ALU_SRC     <= '0';
         RED_BRANCH      <= '0';
-        RED_REG_DST     <= '0';
         RED_MEM_TO_Reg  <= '0';
         RED_REG_WRITE   <= '0';
         RED_MEM_READ    <= '0';
@@ -60,7 +58,6 @@ begin
 					 
             when "0110011" =>  -- R-type ALU ops (add, sub, and, or)
                 RED_ALU_SRC     <= '0';   -- Register
-                RED_REG_DST     <= '1';
                 RED_MEM_TO_Reg  <= '0';
                 RED_REG_WRITE   <= '1';
 
@@ -104,7 +101,6 @@ begin
                 RED_ALU_OP      <= "0000";
                 RED_ALU_SRC     <= '0';
                 RED_BRANCH      <= '0';
-                RED_REG_DST     <= '0';
                 RED_MEM_TO_Reg  <= '0';
                 RED_REG_WRITE   <= '0';
                 RED_MEM_READ    <= '0';

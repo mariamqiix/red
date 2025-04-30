@@ -16,7 +16,7 @@ end RED_REGISTER_FILE;
 
 architecture Behavioral of RED_REGISTER_FILE is
     type RED_REGISTER_Array is array(0 to 31) of std_logic_vector(31 downto 0);
-    signal RED_REGISTER : RED_REGISTER_Array := (others => (others => '0'));
+    signal RED_REGISTER : RED_REGISTER_Array;
 begin
 
     process(RED_REG_WRITE, RED_WRITE_REG, RED_WRITE_DATA)
