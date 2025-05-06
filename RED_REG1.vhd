@@ -9,11 +9,9 @@ entity RED_REG1 is
         -- Inputs from Stage 1
         Next_RED_ADDRESS       : in  STD_LOGIC_VECTOR(63 downto 0);
         Next_RED_INSTRUCTION   : in  STD_LOGIC_VECTOR(31 downto 0);
-		  Next_RED_PC_P4         : in STD_LOGIC_VECTOR(63 downto 0);
         -- Outputs for Stage 2
         RED_ADDRESS_REG        : out STD_LOGIC_VECTOR(63 downto 0);
-        RED_INSTRUCTION_REG    : out STD_LOGIC_VECTOR(31 downto 0);
-		  RED_PC_P4              : out STD_LOGIC_VECTOR(63 downto 0)
+        RED_INSTRUCTION_REG    : out STD_LOGIC_VECTOR(31 downto 0)
 
     );
 end RED_REG1;
@@ -23,7 +21,6 @@ architecture Behavioral of RED_REG1 is
     -- Declare internal signals to hold next values
     signal next_temp_address : STD_LOGIC_VECTOR(63 downto 0);
     signal next_temp_instruction : STD_LOGIC_VECTOR(31 downto 0);
-	 signal next_address_p4 : STD_LOGIC_VECTOR(63 downto 0);
 
 begin
     -- Process to store next values in temporary signals
@@ -33,11 +30,9 @@ begin
             -- First, save the current value of next_temp into the output
             RED_ADDRESS_REG <= next_temp_address;
             RED_INSTRUCTION_REG <= next_temp_instruction;
-				RED_PC_P4 <= next_address_p4;
             -- Now, update the next_temp values with the current inputs
             next_temp_address <= Next_RED_ADDRESS;
             next_temp_instruction <= Next_RED_INSTRUCTION;
-				next_address_p4 <= Next_RED_PC_P4;
         end if;
     end process;
 end Behavioral;

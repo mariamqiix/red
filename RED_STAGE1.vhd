@@ -6,12 +6,11 @@ entity RED_STAGE1 is
     Port (
         -- Inputs
         RED_SELECT       : in  STD_LOGIC := '0';
-        RED_SIGNAL_PC_P4 : in  STD_LOGIC_VECTOR(63 downto 0) := (others => '0');
         RED_BRAMCH_ADD   : in  STD_LOGIC_VECTOR(63 downto 0);
 
         -- Outputs
         RED_ADDRESS      : out STD_LOGIC_VECTOR(63 downto 0);
-        RED_PC_P4        : out STD_LOGIC_VECTOR(63 downto 0);
+
         RED_INSTRUCTION  : out STD_LOGIC_VECTOR(31 downto 0)
     );
 end RED_STAGE1;
@@ -54,6 +53,7 @@ architecture Behavioral of RED_STAGE1 is
     -- Internal signals
     signal selected_input         : STD_LOGIC_VECTOR(63 downto 0);
     signal internal_red_address   : STD_LOGIC_VECTOR(63 downto 0);
+	 signal RED_SIGNAL_PC_P4 : STD_LOGIC_VECTOR(63 downto 0);
 
 begin
 
@@ -77,7 +77,7 @@ begin
     U2: RED_ADDER_FOR_PC_P4
         Port map (
             RED_PC    => internal_red_address,
-            RED_PC_P4 => RED_PC_P4
+            RED_PC_P4 => RED_SIGNAL_PC_P4
         );
 
     -- RED_INST_MEM: Uses only lower 8 bits of PC
