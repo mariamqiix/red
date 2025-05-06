@@ -5,6 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity RED_STAGE2 is
     Port (
         -- Inputs
+		  RED_CLOCK       : in STD_LOGIC;
         RED_INSTRUCTION : in  STD_LOGIC_VECTOR(31 downto 0);
         RED_ADDRESS     : in  STD_LOGIC_VECTOR(63 downto 0);
         RED_WRITE_DATA  : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -35,6 +36,7 @@ architecture Behavioral of RED_STAGE2 is
     -- Component declarations
     component RED_CONTROL_UNIT
         Port (
+		      RED_CLOCK        : in STD_LOGIC;
             RED_INSTRUCTION  : in  STD_LOGIC_VECTOR(31 downto 0);
             RED_ALU_OP       : out STD_LOGIC_VECTOR(3 downto 0);
             RED_ALU_SRC      : out STD_LOGIC;
@@ -48,6 +50,7 @@ architecture Behavioral of RED_STAGE2 is
 
     component RED_REGISTER_FILE
         Port (
+		      RED_CLOCK         : in STD_LOGIC;
             RED_REG_WRITE     : in  STD_LOGIC;
             RED_REG1          : in  STD_LOGIC_VECTOR(4 downto 0);
             RED_REG2          : in  STD_LOGIC_VECTOR(4 downto 0);
@@ -60,6 +63,7 @@ architecture Behavioral of RED_STAGE2 is
 
     component RED_IMM_GEN
         Port (
+		      RED_CLOCK         : in STD_LOGIC;
             RED_IMM           : in  STD_LOGIC_VECTOR(31 downto 0);
             RED_EXTENDET_IMM  : out STD_LOGIC_VECTOR(63 downto 0)
         );
@@ -72,6 +76,7 @@ begin
     -- Control unit
     CU: RED_CONTROL_UNIT
         Port map (
+		      RED_CLOCK        => RED_CLOCK,
             RED_INSTRUCTION  => RED_INSTRUCTION,
             RED_ALU_OP       => RED_ALU_OP,
             RED_ALU_SRC      => RED_ALU_SRC,
@@ -88,6 +93,7 @@ begin
     -- Register File
     RF: RED_REGISTER_FILE
         Port map (
+		      RED_CLOCK      => RED_CLOCK,
             RED_REG_WRITE  => RED_REG_WRITE_IN,
             RED_REG1       => RED_INSTRUCTION(19 downto 15),
             RED_REG2       => RED_INSTRUCTION(24 downto 20),
@@ -100,6 +106,7 @@ begin
     -- Immediate Generator
     IG: RED_IMM_GEN
         Port map (
+		      RED_CLOCK         => RED_CLOCK,
             RED_IMM           => RED_INSTRUCTION,
             RED_EXTENDET_IMM  => RED_EXTENDET_IMM
         );

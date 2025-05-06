@@ -5,6 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity RED_STAGE4 is
     Port (
         -- Inputs from Stage 3
+		  RED_CLOCK              : in STD_LOGIC;
         RED_MEM_TO_REG_IN      : in  STD_LOGIC;
         RED_MEM_READ_IN        : in  STD_LOGIC;
         RED_MEM_WRITE_IN       : in  STD_LOGIC;
@@ -33,6 +34,7 @@ architecture Behavioral of RED_STAGE4 is
     -- Component declarations
     component RED_DATA_MEM 
         Port (
+		      RED_CLOCK              : in STD_LOGIC;
             RED_MEM_WRITE   : in  STD_LOGIC;
             RED_MEM_READ    : in  STD_LOGIC;
             RED_ADDRESS     : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -43,6 +45,7 @@ architecture Behavioral of RED_STAGE4 is
 
     component RED_MUX_FOR_MEM_TO_REG 
         Port (
+		      RED_CLOCK          : in STD_LOGIC;
             RED_SELECT         : in  STD_LOGIC;
             RED_ALU_RESULTS    : in  STD_LOGIC_VECTOR(31 downto 0);
             RED_MEM_DATA       : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -55,6 +58,7 @@ begin
     -- Data memory access
     DATA_MEMORY : RED_DATA_MEM
         port map (
+		      RED_CLOCK      => RED_CLOCK,
             RED_MEM_WRITE  => RED_MEM_WRITE_IN,
             RED_MEM_READ   => RED_MEM_READ_IN,
             RED_ADDRESS    => RED_ALU_RESULTS_IN,
@@ -65,6 +69,7 @@ begin
     -- Write-back selection mux
     WB_MUX : RED_MUX_FOR_MEM_TO_REG
         port map (
+		      RED_CLOCK       => RED_CLOCK,
             RED_SELECT      => RED_MEM_TO_REG_IN,
             RED_ALU_RESULTS => RED_ALU_RESULTS_IN,
             RED_MEM_DATA    => RED_MEM_DATA,

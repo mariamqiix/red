@@ -5,6 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity RED_STAGE3 is
     Port (
         -- Inputs
+		  RED_CLOCK               : in STD_LOGIC;
         RED_PC_IN               : in  STD_LOGIC_VECTOR(63 downto 0);
         RED_READ_DATA1_IN       : in  STD_LOGIC_VECTOR(31 downto 0);
         RED_READ_DATA2_IN       : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -47,6 +48,7 @@ architecture Behavioral of RED_STAGE3 is
 
     component RED_MUX_FOR_ALU_SRC
         Port (
+		      RED_CLOCK     : in STD_LOGIC;
             RED_SELECT    : in  STD_LOGIC;
             RED_INPUT_A   : in  STD_LOGIC_VECTOR(31 downto 0);
             RED_INPUT_B   : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -56,6 +58,7 @@ architecture Behavioral of RED_STAGE3 is
 
     component RED_ADDER_FOR_BRANCH
         Port (
+		      RED_CLOCK        : in STD_LOGIC;
             RED_PC           : in  STD_LOGIC_VECTOR(63 downto 0);
             RED_OFFSET       : in  STD_LOGIC_VECTOR(63 downto 0);
             RED_BRANCH_ADDER : out STD_LOGIC_VECTOR(63 downto 0)
@@ -64,6 +67,7 @@ architecture Behavioral of RED_STAGE3 is
 
     component RED_ALU
         Port (
+		      RED_CLOCK         : in STD_LOGIC;
             RED_INPUT_A       : in  STD_LOGIC_VECTOR(31 downto 0);
             RED_INPUT_B       : in  STD_LOGIC_VECTOR(31 downto 0);
             RED_ALU_CTRL      : in  STD_LOGIC_VECTOR(3 downto 0);
@@ -74,6 +78,7 @@ architecture Behavioral of RED_STAGE3 is
 
     component RED_SL_BY_1
         Port (
+		      RED_CLOCK               : in STD_LOGIC;
             RED_INPUT  : in  STD_LOGIC_VECTOR(63 downto 0);
             RED_OUTPUT : out STD_LOGIC_VECTOR(63 downto 0)
         );
@@ -85,6 +90,7 @@ begin
     -- Shift immediate left by 1
     RED_SHIFT_IMM: RED_SL_BY_1
         Port map (
+		      RED_CLOCK  => RED_CLOCK,
             RED_INPUT  => RED_IMMEDIATE_IN,
             RED_OUTPUT => RED_SHIFTED_OFFSET
         );
@@ -93,6 +99,7 @@ begin
     -- Branch target address = PC + shifted immediate
     RED_BRANCH_ADDR: RED_ADDER_FOR_BRANCH
         Port map (
+		      RED_CLOCK        => RED_CLOCK,
             RED_PC           => RED_PC_IN,
             RED_OFFSET       => RED_SHIFTED_OFFSET,
             RED_BRANCH_ADDER => RED_BRANCH_TARGET
@@ -101,6 +108,7 @@ begin
     -- ALU input B selection
     RED_ALU_SRC_MUX: RED_MUX_FOR_ALU_SRC
         Port map (
+		      RED_CLOCK    => RED_CLOCK,
             RED_SELECT   => RED_ALU_SRC_IN,
             RED_INPUT_A  => RED_READ_DATA2_IN,
             RED_INPUT_B  => RED_IMMEDIATE_IN(31 downto 0),
@@ -111,6 +119,7 @@ begin
     -- ALU Operation
     RED_MAIN_ALU: RED_ALU
         Port map (
+		      RED_CLOCK       => RED_CLOCK,
             RED_INPUT_A     => RED_READ_DATA1_IN,
             RED_INPUT_B     => RED_ALU_INPUT_B_INT,
             RED_ALU_CTRL    => RED_ALU_OP_IN,

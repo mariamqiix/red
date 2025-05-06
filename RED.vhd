@@ -14,6 +14,7 @@ architecture Behavioral of RED is
     component RED_STAGE1 is
         Port (
             -- Inputs
+            RED_CLOCK        : in STD_LOGIC;
             RED_SELECT       : in  STD_LOGIC;
             RED_BRAMCH_ADD   : in  STD_LOGIC_VECTOR(63 downto 0);
 
@@ -26,6 +27,7 @@ architecture Behavioral of RED is
     component RED_STAGE2 is
         Port (
             -- Inputs
+				RED_CLOCK        : in STD_LOGIC;
             RED_INSTRUCTION : in  STD_LOGIC_VECTOR(31 downto 0);
             RED_ADDRESS     : in  STD_LOGIC_VECTOR(63 downto 0);
             RED_WRITE_DATA  : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -53,6 +55,7 @@ architecture Behavioral of RED is
     component RED_STAGE3 is
         Port (
             -- Inputs
+				RED_CLOCK        : in STD_LOGIC;
             RED_PC_IN               : in  STD_LOGIC_VECTOR(63 downto 0);
             RED_READ_DATA1_IN       : in  STD_LOGIC_VECTOR(31 downto 0);
             RED_READ_DATA2_IN       : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -87,6 +90,7 @@ architecture Behavioral of RED is
     component RED_STAGE4 is
         Port (
             -- Inputs from Stage 3
+				RED_CLOCK        : in STD_LOGIC;
             RED_MEM_TO_REG_IN      : in  STD_LOGIC;
             RED_MEM_READ_IN        : in  STD_LOGIC;
             RED_MEM_WRITE_IN       : in  STD_LOGIC;
@@ -250,6 +254,7 @@ begin
 
 STAGE1 : RED_STAGE1  Port map (
             -- Inputs
+				RED_CLOCK         => RED_CLOCK,
             RED_SELECT       => RED_STAGE1_INPUT_RED_SELECT,
             RED_BRAMCH_ADD   => RED_STAGE1_INPUT_RED_BRANCH_ADD,
 
@@ -269,6 +274,7 @@ REG1 : RED_REG1  Port map (
 		 
 STAGE2 : RED_STAGE2 port map ( 
 				 -- Inputs
+				RED_CLOCK          => RED_CLOCK,
             RED_INSTRUCTION 	 => RED_STAGE2_INPUT_RED_INSTRUCTION,
             RED_ADDRESS    	 => RED_STAGE2_INPUT_RED_ADDRESS,
             RED_WRITE_DATA   	 => RED_STAGE2_INPUT_RED_WRITE_DATA ,
@@ -322,6 +328,7 @@ REG2 : RED_REG2 port map(
 				
 STAGE3 : RED_STAGE3 port map(
 				 -- Inputs
+				RED_CLOCK             => RED_CLOCK,
             RED_PC_IN             => RED_STAGE3_INPUT_RED_PC_IN,
             RED_READ_DATA1_IN     => RED_STAGE3_INPUT_RED_READ_DATA1_IN,
             RED_READ_DATA2_IN     => RED_STAGE3_INPUT_RED_READ_DATA2_IN,
@@ -379,6 +386,7 @@ REG3 : RED_REG3 port map(
 				
 STAGE4 : RED_STAGE4 port map(
 				   -- Inputs from Stage 3
+				RED_CLOCK              => RED_CLOCK,
             RED_MEM_TO_REG_IN      => RED_STAGE4_INPUT_RED_MEM_TO_REG_IN,
             RED_MEM_READ_IN        => RED_STAGE4_INPUT_RED_MEM_READ_IN,
             RED_MEM_WRITE_IN       => RED_STAGE4_INPUT_RED_MEM_WRITE_IN,

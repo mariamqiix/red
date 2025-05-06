@@ -5,6 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RED_INST_MEM is
     Port (
+	     RED_CLOCK   : in STD_LOGIC;
         RED_ADDRESS    : in  STD_LOGIC_VECTOR(7 downto 0);
         RED_INSTRUCTION : out STD_LOGIC_VECTOR(31 downto 0)
     );
@@ -64,9 +65,18 @@ architecture Behavioral of RED_INST_MEM is
     others => (others => '0')
 );
 
-	 begin
-	 
-    RED_INSTRUCTION <= RED_MEM(to_integer(unsigned(RED_ADDRESS)));
+    signal instruction_reg : STD_LOGIC_VECTOR(31 downto 0);
+
+begin
+
+    process(RED_CLOCK)
+    begin
+        if rising_edge(RED_CLOCK) then
+            instruction_reg <= RED_MEM(to_integer(unsigned(RED_ADDRESS)));
+        end if;
+    end process;
+
+    RED_INSTRUCTION <= instruction_reg;
 	 
 end Behavioral;
 

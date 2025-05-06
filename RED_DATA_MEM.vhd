@@ -4,6 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RED_DATA_MEM is
     Port (
+        RED_CLOCK       : in STD_LOGIC;
         RED_MEM_WRITE   : in  STD_LOGIC;
         RED_MEM_READ    : in  STD_LOGIC;
         RED_ADDRESS     : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -20,18 +21,20 @@ architecture Behavioral of RED_DATA_MEM is
 
 begin
 
-    process(RED_MEM_READ, RED_MEM_WRITE, RED_ADDRESS, RED_WRITE_DATA)
+    process(RED_CLOCK)  -- Trigger on rising edge of RED_CLOCK
     begin
-        RED_ADDR_INDEX <= to_integer(unsigned(RED_ADDRESS(9 downto 2)));  -- Word-aligned address (ignores lower 2 bits)
+        if rising_edge(RED_CLOCK) then  -- Triggered only on the rising edge of the clock
+            RED_ADDR_INDEX <= to_integer(unsigned(RED_ADDRESS(9 downto 2)));  -- Word-aligned address (ignores lower 2 bits)
 
-        if RED_MEM_WRITE = '1' then
-            RED_RAM(RED_ADDR_INDEX) <= RED_WRITE_DATA;
-        end if;
+            if RED_MEM_WRITE = '1' then
+                RED_RAM(RED_ADDR_INDEX) <= RED_WRITE_DATA;
+            end if;
 
-        if RED_MEM_READ = '1' then
-            RED_DATA <= RED_RAM(RED_ADDR_INDEX);
-        else
-            RED_DATA <= (others => 'Z');
+            if RED_MEM_READ = '1' then
+                RED_DATA <= RED_RAM(RED_ADDR_INDEX);
+            else
+                RED_DATA <= (others => 'Z');  -- High impedance state when no read operation
+            end if;
         end if;
     end process;
 
