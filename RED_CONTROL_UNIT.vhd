@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RED_CONTROL_UNIT is
     Port (
-        RED_CLOCK        : in STD_LOGIC;
+	     RED_CLOCK        : in STD_LOGIC;
         RED_INSTRUCTION  : in  STD_LOGIC_VECTOR(31 downto 0);
         RED_ALU_OP       : out STD_LOGIC_VECTOR(3 downto 0);
         RED_ALU_SRC      : out STD_LOGIC;
@@ -22,95 +22,91 @@ architecture Behavioral of RED_CONTROL_UNIT is
     signal RED_FUNCT3  : STD_LOGIC_VECTOR(2 downto 0);
     signal RED_FUNCT7  : STD_LOGIC_VECTOR(6 downto 0);
 
-    signal alu_op_int      : STD_LOGIC_VECTOR(3 downto 0);
-    signal alu_src_int     : STD_LOGIC;
-    signal branch_int      : STD_LOGIC;
-    signal mem_to_reg_int  : STD_LOGIC;
-    signal reg_write_int   : STD_LOGIC;
-    signal mem_read_int    : STD_LOGIC;
-    signal mem_write_int   : STD_LOGIC;
-
 begin
 
     RED_OPCODE  <= RED_INSTRUCTION(6 downto 0);
     RED_FUNCT3  <= RED_INSTRUCTION(14 downto 12);
     RED_FUNCT7  <= RED_INSTRUCTION(31 downto 25);
 
-    process(RED_CLOCK)
+    process(RED_OPCODE, RED_FUNCT3, RED_FUNCT7)
     begin
-        if rising_edge(RED_CLOCK) then
+	         -- Default values 
+        RED_ALU_OP      <= "0000";
+        RED_ALU_SRC     <= '0';
+        RED_BRANCH      <= '0';
+        RED_MEM_TO_Reg  <= '0';
+        RED_REG_WRITE   <= '0';
+        RED_MEM_READ    <= '0';
+        RED_MEM_WRITE   <= '0';
+		  
+		  
+        case RED_OPCODE is
+            when "0000011" =>  -- Load (ld)
+                RED_ALU_OP      <= "0010";  -- ADD for address
+                RED_ALU_SRC     <= '1';   -- Immediate
+                RED_MEM_READ    <= '1';
+                RED_MEM_TO_Reg  <= '1';
+                RED_REG_WRITE   <= '1';
+					 
+					 
 
-            -- Default values 
-            alu_op_int      <= "0000";
-            alu_src_int     <= '0';
-            branch_int      <= '0';
-            mem_to_reg_int  <= '0';
-            reg_write_int   <= '0';
-            mem_read_int    <= '0';
-            mem_write_int   <= '0';
+            when "0100011" =>  -- Store (sd)
+                RED_ALU_OP      <= "0010";  -- ADD for address
+                RED_ALU_SRC     <= '1';   -- Immediate
+                RED_MEM_WRITE   <= '1';
 
-            case RED_OPCODE is
-                when "0000011" =>  -- Load (ld)
-                    alu_op_int      <= "0001";  -- ADD
-                    alu_src_int     <= '1';   -- Immediate
-                    mem_read_int    <= '1';
-                    mem_to_reg_int  <= '1';
-                    reg_write_int   <= '1';
+					 
+					 
+            when "0110011" =>  -- R-type ALU ops (add, sub, and, or)
+                RED_ALU_SRC     <= '0';   -- Register
+                RED_MEM_TO_Reg  <= '0';
+                RED_REG_WRITE   <= '1';
 
-                when "0100011" =>  -- Store (sd)
-                    alu_op_int      <= "0001";  -- ADD
-                    alu_src_int     <= '1';   -- Immediate
-                    mem_write_int   <= '1';
+                case RED_FUNCT3 is
+                    when "000" =>
+						  
+                        if RED_FUNCT7 = "0100000" then
+                            RED_ALU_OP <= "0001"; -- SUB
+									 
+                        else
+                            RED_ALU_OP <= "0010"; -- ADD
+									 
+                        end if;
 
-                when "0110011" =>  -- R-type ALU ops
-                    alu_src_int     <= '0';   -- Register
-                    mem_to_reg_int  <= '0';
-                    reg_write_int   <= '1';
+						  when "001"  => RED_ALU_OP <= "0110"; -- SLL	
+	                 when "100"  => RED_ALU_OP <= "1100"; -- xOR
+	                 when "110"  => RED_ALU_OP <= "1011"; -- OR
+                    when "111"  => RED_ALU_OP <= "1010"; -- AND
+                    when others => RED_ALU_OP <= "0000";
+						  
+                end case;
+					 
 
-                    case RED_FUNCT3 is
-                        when "000" =>
-                            if RED_FUNCT7 = "0100000" then
-                                alu_op_int <= "0001"; -- SUB
-                            else
-                                alu_op_int <= "0010"; -- ADD
-                            end if;
-                        when "001"  => alu_op_int <= "0110"; -- SLL
-                        when "100"  => alu_op_int <= "1100"; -- XOR
-                        when "110"  => alu_op_int <= "1011"; -- OR
-                        when "111"  => alu_op_int <= "1010"; -- AND
-                        when others => alu_op_int <= "0000";
-                    end case;
 
-                when "1100011" =>  -- Branch
-                    alu_src_int     <= '0';
-                    branch_int      <= '1';
+            when "1100011" =>  -- Branch (e.g., BEQ, BNE)
+				
+                RED_ALU_SRC     <= '0';   -- Compare 2 registers
+                RED_BRANCH      <= '1';
+					 
+                case RED_FUNCT3 is
+					 
+                    when "000" | "001" =>
+                        RED_ALU_OP <= "0001"; -- SUB for comparison
+								
+                    when others =>
+                        RED_ALU_OP <= "0000";
+								
+                end case;
 
-                    case RED_FUNCT3 is
-                        when "000" | "001" =>
-                            alu_op_int <= "0001"; -- SUB
-                        when others =>
-                            alu_op_int <= "0000";
-                    end case;
-
-                when others =>
-                    alu_op_int      <= "0000";
-                    alu_src_int     <= '0';
-                    branch_int      <= '0';
-                    mem_to_reg_int  <= '0';
-                    reg_write_int   <= '0';
-                    mem_read_int    <= '0';
-                    mem_write_int   <= '0';
-            end case;
-        end if;
+            when others =>
+                RED_ALU_OP      <= "0000";
+                RED_ALU_SRC     <= '0';
+                RED_BRANCH      <= '0';
+                RED_MEM_TO_Reg  <= '0';
+                RED_REG_WRITE   <= '0';
+                RED_MEM_READ    <= '0';
+                RED_MEM_WRITE   <= '0';
+        end case;
     end process;
-
-    -- Assign internal signals to outputs
-    RED_ALU_OP      <= alu_op_int;
-    RED_ALU_SRC     <= alu_src_int;
-    RED_BRANCH      <= branch_int;
-    RED_MEM_TO_Reg  <= mem_to_reg_int;
-    RED_REG_WRITE   <= reg_write_int;
-    RED_MEM_READ    <= mem_read_int;
-    RED_MEM_WRITE   <= mem_write_int;
 
 end Behavioral;

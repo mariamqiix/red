@@ -16,26 +16,27 @@ end RED_DATA_MEM;
 architecture Behavioral of RED_DATA_MEM is
 
     type RED_MEM_ARRAY is array (0 to 255) of STD_LOGIC_VECTOR(31 downto 0);
-    signal RED_RAM : RED_MEM_ARRAY;
+    signal RED_RAM : RED_MEM_ARRAY := (others => (others => '0'));
     signal RED_ADDR_INDEX : integer range 0 to 255;
+
+    signal RED_DATA_TMP : STD_LOGIC_VECTOR(31 downto 0);
 
 begin
 
-    process(RED_CLOCK)  -- Trigger on rising edge of RED_CLOCK
+    -- Address decoding logic
+    RED_ADDR_INDEX <= to_integer(unsigned(RED_ADDRESS(9 downto 2)));
+
+    -- Memory write (unclocked, NOT recommended for synthesis)
+    process(RED_MEM_WRITE, RED_ADDR_INDEX, RED_WRITE_DATA)
     begin
-        if rising_edge(RED_CLOCK) then  -- Triggered only on the rising edge of the clock
-            RED_ADDR_INDEX <= to_integer(unsigned(RED_ADDRESS(9 downto 2)));  -- Word-aligned address (ignores lower 2 bits)
-
-            if RED_MEM_WRITE = '1' then
-                RED_RAM(RED_ADDR_INDEX) <= RED_WRITE_DATA;
-            end if;
-
-            if RED_MEM_READ = '1' then
-                RED_DATA <= RED_RAM(RED_ADDR_INDEX);
-            else
-                RED_DATA <= (others => 'Z');  -- High impedance state when no read operation
-            end if;
+        if RED_MEM_WRITE = '1' then
+            RED_RAM(RED_ADDR_INDEX) <= RED_WRITE_DATA;
         end if;
     end process;
+
+    -- Memory read using `with ... select`
+    with RED_MEM_READ select
+        RED_DATA <= RED_RAM(RED_ADDR_INDEX) when '1',
+                     (others => 'Z')        when others;
 
 end Behavioral;

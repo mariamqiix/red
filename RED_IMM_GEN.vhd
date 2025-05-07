@@ -14,12 +14,12 @@ architecture Behavioral of RED_IMM_GEN is
     signal imm_extended : STD_LOGIC_VECTOR(63 downto 0);
 begin
 
-    process(RED_CLOCK)
-    begin
-        if rising_edge(RED_CLOCK) then
+--    process(RED_CLOCK)
+--    begin
+--        if rising_edge(RED_CLOCK) then
             imm_extended <= std_logic_vector(resize(signed(RED_IMM), 64));
-        end if;
-    end process;
+--        end if;
+--    end process;
 
     RED_EXTENDET_IMM <= imm_extended;
 

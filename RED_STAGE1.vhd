@@ -8,9 +8,11 @@ entity RED_STAGE1 is
         RED_CLOCK        : in STD_LOGIC;
         RED_SELECT       : in  STD_LOGIC := '0';
         RED_BRAMCH_ADD   : in  STD_LOGIC_VECTOR(63 downto 0);
+		  RED_Pc_P4_INPUT  : in STD_LOGIC_VECTOR(63 downto 0);
 
         -- Outputs
         RED_ADDRESS      : out STD_LOGIC_VECTOR(63 downto 0);
+		  RED_Pc_P4_OUTPUT : out STD_LOGIC_VECTOR(63 downto 0);
         RED_INSTRUCTION  : out STD_LOGIC_VECTOR(31 downto 0)
     );
 end RED_STAGE1;
@@ -57,7 +59,7 @@ architecture Behavioral of RED_STAGE1 is
     -- Internal signals
     signal selected_input         : STD_LOGIC_VECTOR(63 downto 0);
     signal internal_red_address   : STD_LOGIC_VECTOR(63 downto 0);
-	 signal RED_SIGNAL_PC_P4       : STD_LOGIC_VECTOR(63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
+--	 signal RED_SIGNAL_PC_P4       : STD_LOGIC_VECTOR(63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
 
 begin
 
@@ -66,7 +68,7 @@ begin
         Port map (
 		      RED_CLOCK        => RED_CLOCK,
             RED_SELECT       => RED_SELECT,
-            RED_SIGNAL_PC_P4 => RED_SIGNAL_PC_P4,
+            RED_SIGNAL_PC_P4 => RED_Pc_P4_INPUT,
             RED_BRAMCH_ADD   => RED_BRAMCH_ADD,
             RED_OUTPUT       => selected_input
         );
@@ -84,7 +86,7 @@ begin
         Port map (
 		      RED_CLOCK => RED_CLOCK,
             RED_PC    => internal_red_address,
-            RED_PC_P4 => RED_SIGNAL_PC_P4
+            RED_PC_P4 => RED_Pc_P4_OUTPUT
         );
 
     -- RED_INST_MEM: Uses only lower 8 bits of PC
@@ -94,8 +96,16 @@ begin
             RED_ADDRESS     => internal_red_address(9 downto 2),
             RED_INSTRUCTION => RED_INSTRUCTION
         );
-
+		  
+--		  process(RED_CLOCK)
+--begin
+--    if rising_edge(RED_CLOCK) then
     -- Output the computed address
     RED_ADDRESS <= internal_red_address;
+--    end if;
+--end process;
+
+
+
 
 end Behavioral;

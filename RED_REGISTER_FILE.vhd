@@ -20,15 +20,15 @@ architecture Behavioral of RED_REGISTER_FILE is
     signal RED_REGISTER : RED_REGISTER_Array := (others => (others => '0'));
 begin
 
-    -- Write Process (Synchronous to RED_CLOCK)
-    process(RED_CLOCK)
-    begin
-        if rising_edge(RED_CLOCK) then
-            if RED_REG_WRITE = '1' then
+--    -- Write Process (Synchronous to RED_CLOCK)
+--    process(RED_CLOCK)
+--    begin
+--        if rising_edge(RED_CLOCK) then
+--            if RED_REG_WRITE = '1' then
                 RED_REGISTER(to_integer(unsigned(RED_WRITE_REG))) <= RED_WRITE_DATA;
-            end if;
-        end if;
-    end process;
+--            end if;
+--        end if;
+--    end process;
 
     -- Read Ports (Asynchronous)
     RED_DATA1 <= RED_REGISTER(to_integer(unsigned(RED_REG1)));

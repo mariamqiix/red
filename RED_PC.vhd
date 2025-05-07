@@ -16,12 +16,12 @@ architecture Behavioral of RED_PC is
 
 begin
 
-    process(RED_CLOCK)
-    begin
-        if rising_edge(RED_CLOCK) then
+--    process(RED_CLOCK)
+--    begin
+--        if rising_edge(RED_CLOCK) then
             RED_ADDRESS <= RED_INPUT;
-        end if;
-    end process;
+--        end if;
+--    end process;
 
 --    RED_ADDRESS <= PC;
 

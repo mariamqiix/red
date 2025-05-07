@@ -17,64 +17,51 @@ architecture Behavioral of RED_INST_MEM is
     -- signal RED_MEM : RED_MEM_TYPE;
 	 
 	 -- just to test the stage 1
-	     signal RED_MEM : RED_MEM_TYPE := (
-    0  => x"00000033",  -- ADD x0, x0, x0       ; NOP
-    1  => x"000000B3",  -- ADD x1, x0, x0       ; x1 = 0
-    2  => x"001080B3",  -- ADD x1, x1, x1       ; still 0
-    3  => x"001080B3",  -- ADD x1, x1, x1       ; still 0
+	    signal RED_MEM : RED_MEM_TYPE := (
+    -- add x1, x0, x0     => x1 = 0
+    0  => x"000000b3",  -- opcode: 0110011, funct3: 000, funct7: 0000000
 
-    -- Create x2 = x1 + x1 = 0
-    4  => x"00108133",  -- ADD x2, x1, x1
+    -- add x2, x1, x1     => x2 = 0
+    1  => x"001080b3",  -- rd=2, rs1=1, rs2=1
 
-    -- x3 = x2 + x2 = 0
-    5  => x"002101B3",  -- ADD x3, x2, x2
+    -- or x3, x1, x2      => x3 = x1 | x2 = 0
+    2  => x"0020E1B3",  -- funct3: 110, funct7: 0000000
 
-    -- x4 = x3 OR x1 = 0
-    6  => x"0011A233",  -- OR x4, x3, x1
+    -- and x4, x2, x3     => x4 = 0
+    3  => x"00311733",  -- funct3: 111
 
-    -- x5 = x3 AND x1 = 0
-    7  => x"0011B2B3",  -- AND x5, x3, x1
+    -- sd x4, 0(x0)       => store x4 to mem[0]
+    4  => x"00403023",  -- funct3: 011, opcode: 0100011
 
-    -- Store x4 (0) into mem[0](x0)
-    8  => x"00402023",  -- SD x4, 0(x0)
+    -- ld x5, 0(x0)       => load mem[0] to x5
+    5  => x"00003283",  -- funct3: 011, opcode: 0000011
 
-    -- Load into x6 from mem[0](x0)
-    9  => x"0000A303",  -- LD x6, 0(x1)
+    -- sub x6, x5, x4     => x6 = x5 - x4
+    6  => x"40428333",  -- funct7: 0100000
 
-    -- Add x7 = x1 + x6
-    10 => x"0060C3B3",  -- ADD x7, x1, x6
+    -- beq x6, x0, +8     => should not branch if x6 != 0
+    7  => x"00030663",  -- funct3: 000, opcode: 1100011, imm=+8 (offset = 2 instructions)
 
-    -- Sub x8 = x7 - x6 = x1
-    11 => x"4063C433",  -- SUB x8, x7, x6
+    -- add x7, x6, x1     => skipped if branch taken
+    8  => x"001303B3",
 
-    -- AND x9 = x6 AND x8
-    12 => x"0083D4B3",  -- AND x9, x7, x8
-
-    -- OR x10 = x7 OR x6
-    13 => x"0063E533",  -- OR x10, x7, x6
-
-    -- BEQ x1, x2, +4 (should not branch)
-    14 => x"00208663",  -- BEQ x1, x2, +4
-
-    -- ADD x11 = x10 + x1 (executes if no branch)
-    15 => x"0012F5B3",  -- ADD x11, x5, x1
-
-    -- Label target for BEQ
-    16 => x"00000033",  -- NOP
+    -- nop (add x0, x0, x0)
+    9  => x"00000033",
 
     others => (others => '0')
 );
+
 
     signal instruction_reg : STD_LOGIC_VECTOR(31 downto 0);
 
 begin
 
-    process(RED_CLOCK)
-    begin
-        if rising_edge(RED_CLOCK) then
+--    process(RED_CLOCK)
+--    begin
+--        if rising_edge(RED_CLOCK) then
             instruction_reg <= RED_MEM(to_integer(unsigned(RED_ADDRESS)));
-        end if;
-    end process;
+--        end if;
+--    end process;
 
     RED_INSTRUCTION <= instruction_reg;
 	 

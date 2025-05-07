@@ -12,10 +12,10 @@ end RED_SL_BY_1;
 
 architecture Behavioral of RED_SL_BY_1 is
 begin
-    process(RED_CLOCK)
-    begin
-        if rising_edge(RED_CLOCK) then
+--    process(RED_CLOCK)
+--    begin
+--        if rising_edge(RED_CLOCK) then
             RED_OUTPUT <= std_logic_vector(shift_left(unsigned(RED_INPUT), 1));
-        end if;
-    end process;
+--        end if;
+--    end process;
 end Behavioral;

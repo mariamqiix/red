@@ -14,14 +14,8 @@ end RED_MUX_FOR_ALU_SRC;
 
 architecture Behavioral of RED_MUX_FOR_ALU_SRC is
 begin
-    process(RED_CLOCK)
-    begin
-        if rising_edge(RED_CLOCK) then
-            if RED_SELECT = '0' then
-                RED_OUTPUT <= RED_INPUT_A;
-            else
-                RED_OUTPUT <= RED_INPUT_B;
-            end if;
-        end if;
-    end process;
+    with RED_SELECT select
+        RED_OUTPUT <= RED_INPUT_A when '0',
+                      RED_INPUT_B when '1',
+                      (others => '0') when others;
 end Behavioral;
