@@ -4,7 +4,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RED_DATA_MEM is
     Port (
-        RED_CLOCK       : in STD_LOGIC;
         RED_MEM_WRITE   : in  STD_LOGIC;
         RED_MEM_READ    : in  STD_LOGIC;
         RED_ADDRESS     : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -24,7 +23,7 @@ architecture Behavioral of RED_DATA_MEM is
 begin
 
     -- Address decoding logic
-    RED_ADDR_INDEX <= to_integer(unsigned(RED_ADDRESS(9 downto 2)));
+    RED_ADDR_INDEX <= to_integer(unsigned(RED_ADDRESS(7 downto 0)));
 
     -- Memory write (unclocked, NOT recommended for synthesis)
     process(RED_MEM_WRITE, RED_ADDR_INDEX, RED_WRITE_DATA)

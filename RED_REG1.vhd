@@ -22,14 +22,17 @@ architecture Behavioral of RED_REG1 is
     signal next_temp_address : STD_LOGIC_VECTOR(63 downto 0);
     signal next_temp_instruction : STD_LOGIC_VECTOR(31 downto 0);
 
-begin
+begin            
+
+	-- First, save the current value of next_temp into the output
+            RED_ADDRESS_REG <= next_temp_address;
+            RED_INSTRUCTION_REG <= next_temp_instruction;
+				
     -- Process to store next values in temporary signals
     process(RED_CLOCK)
     begin
         if rising_edge(RED_CLOCK) then
-            -- First, save the current value of next_temp into the output
-            RED_ADDRESS_REG <= next_temp_address;
-            RED_INSTRUCTION_REG <= next_temp_instruction;
+
             -- Now, update the next_temp values with the current inputs
             next_temp_address <= Next_RED_ADDRESS;
             next_temp_instruction <= Next_RED_INSTRUCTION;

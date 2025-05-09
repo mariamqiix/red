@@ -4,7 +4,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RED_ALU is
     Port (
-	     RED_CLOCK         : in STD_LOGIC;
         RED_INPUT_A       : in  STD_LOGIC_VECTOR(31 downto 0);  -- Operand 1
         RED_INPUT_B       : in  STD_LOGIC_VECTOR(31 downto 0);  -- Operand 2
         RED_ALU_CTRL      : in  STD_LOGIC_VECTOR(3 downto 0);   -- Control from RED_ALU_CONTROL_UNIT

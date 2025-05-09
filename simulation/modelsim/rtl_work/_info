@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d//wsl.localhost/Ubuntu/home/gaith/red/simulation/modelsim
 Ered
-Z1 w1746606689
+Z1 w1746794598
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -21,9 +21,9 @@ VzBOizLmaHoFE_Ae5n6YO92
 !s100 z:9NM@^EFER<j9mTH8=O42
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1746608453
+Z7 !s110 1746801790
 !i10b 1
-Z8 !s108 1746608453.000000
+Z8 !s108 1746801788.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED.vhd|
 Z10 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED.vhd|
 !i113 1
@@ -33,10 +33,10 @@ Abehavioral
 R2
 R3
 DEx4 work 3 red 0 22 zBOizLmaHoFE_Ae5n6YO92
-l261
+l258
 L10
-VjCg7P9BbI?C4WHzU^bBzl0
-!s100 P>RNnzT6]lNBHD>jGba[R1
+VW`^janhDikk=[0<280a:00
+!s100 ;aD=ozF8oem9Oz_aYdQSo0
 R6
 31
 R7
@@ -48,7 +48,7 @@ R10
 R11
 R12
 Ered_adder_for_branch
-Z13 w1746591870
+Z13 w1746775588
 Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R2
 R3
@@ -57,15 +57,15 @@ Z15 8//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_FOR_BRANCH.vhd
 Z16 F//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_FOR_BRANCH.vhd
 l0
 L5
-VknVTPlLIe?>OCi;[^jBAE3
-!s100 IQ2J3]I_NX7c?I<_?`=H`0
+V@FHQ8hj[cFTg2Dfe]lzj[3
+!s100 ck?ag^@WkTFBAjb6I81kM0
 R6
 31
-Z17 !s110 1746608460
+!s110 1746801813
 !i10b 1
-Z18 !s108 1746608460.000000
-Z19 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_FOR_BRANCH.vhd|
-Z20 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_FOR_BRANCH.vhd|
+Z17 !s108 1746801812.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_FOR_BRANCH.vhd|
+Z19 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_FOR_BRANCH.vhd|
 !i113 1
 R11
 R12
@@ -73,38 +73,38 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 20 red_adder_for_branch 0 22 knVTPlLIe?>OCi;[^jBAE3
-l16
-L14
-VJ]RT]MhglRI64PjoMQK:z0
-!s100 :Q9TkCYlB3?l5Th0<4mA<0
+DEx4 work 20 red_adder_for_branch 0 22 @FHQ8hj[cFTg2Dfe]lzj[3
+l15
+L13
+VZhEGDcgZTRFKm5WNiOLO60
+!s100 ^]aW:dKC1E:zkATRobNWe0
 R6
 31
-R17
+!s110 1746801814
 !i10b 1
+R17
 R18
 R19
-R20
 !i113 1
 R11
 R12
 Ered_adder_for_pc_p4
-Z21 w1746590048
+Z20 w1746706678
 R14
 R2
 R3
 R0
-Z22 8//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_PC_P4.vhd
-Z23 F//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_PC_P4.vhd
+Z21 8//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_PC_P4.vhd
+Z22 F//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_PC_P4.vhd
 l0
 L5
-V7?EbCjO5YP8_klLcY_]cl2
-!s100 ?@^khogUnNdaFW4:_a2]=1
+VGH1ZFW5UT7e6kVU3liR:d2
+!s100 aI`icdPa`1lE9l4`BZBm^3
 R6
 31
-R17
+Z23 !s110 1746801811
 !i10b 1
-Z24 !s108 1746608459.000000
+Z24 !s108 1746801810.000000
 Z25 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_PC_P4.vhd|
 Z26 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_ADDER_PC_P4.vhd|
 !i113 1
@@ -114,14 +114,14 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 19 red_adder_for_pc_p4 0 22 7?EbCjO5YP8_klLcY_]cl2
-l16
-L13
-VkoX^MHj0[a;2Vd1kC2iOA0
-!s100 6R<co:XGV=dm4J[zJ8Bae1
+DEx4 work 19 red_adder_for_pc_p4 0 22 GH1ZFW5UT7e6kVU3liR:d2
+l15
+L12
+VbZ07GH^n<TB;fQE8ZEY0L2
+!s100 j?c4Am>l:NMEW@BoN[Ki32
 R6
 31
-R17
+R23
 !i10b 1
 R24
 R25
@@ -130,7 +130,7 @@ R26
 R11
 R12
 Ered_alu
-Z27 w1746591871
+Z27 w1746708168
 R14
 R2
 R3
@@ -139,13 +139,13 @@ Z28 8//wsl.localhost/Ubuntu/home/gaith/red/RED_ALU.vhd
 Z29 F//wsl.localhost/Ubuntu/home/gaith/red/RED_ALU.vhd
 l0
 L5
-Vh_AVz2<CiB6KnPTV40;U_0
-!s100 MlS60IW9;<K^KigRzO[`l2
+VaQh^P8FQI3CR7:X[HQFT22
+!s100 L@DIc?1ng<C0N`:=RPA]F3
 R6
 31
-Z30 !s110 1746608456
+Z30 !s110 1746801801
 !i10b 1
-Z31 !s108 1746608456.000000
+Z31 !s108 1746801799.000000
 Z32 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_ALU.vhd|
 Z33 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_ALU.vhd|
 !i113 1
@@ -155,11 +155,11 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 7 red_alu 0 22 h_AVz2<CiB6KnPTV40;U_0
-l20
-L17
-VZmU[TON<HOEZC>_1lRjmi2
-!s100 @M=9gazNl[Yi8KA1ChlU02
+DEx4 work 7 red_alu 0 22 aQh^P8FQI3CR7:X[HQFT22
+l19
+L16
+VX6DAFF>G2`AN>LnYRfmLO1
+!s100 RGNAW5ZEhgT?0jz>[m5Cc0
 R6
 31
 R30
@@ -171,7 +171,7 @@ R33
 R11
 R12
 Ered_control_unit
-Z34 w1746606054
+Z34 w1746798305
 R14
 R2
 R3
@@ -180,13 +180,13 @@ Z35 8//wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd
 Z36 F//wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd
 l0
 L5
-V7;Z[J5m?1W^gb^7INX@cU0
-!s100 aJSiUQ5DMNz4gG?i50n9b2
+V4`AJ9n>^D<[E2eIE_dJe50
+!s100 R3mQ@64W^>85PC9gfWgK>3
 R6
 31
-Z37 !s110 1746608455
+Z37 !s110 1746801796
 !i10b 1
-Z38 !s108 1746608455.000000
+Z38 !s108 1746801795.000000
 Z39 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd|
 Z40 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_CONTROL_UNIT.vhd|
 !i113 1
@@ -196,11 +196,11 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 16 red_control_unit 0 22 7;Z[J5m?1W^gb^7INX@cU0
-l25
-L19
-V`eHdmj9VH^c9H<A`:eV1H3
-!s100 4zi11l^dgXQRh2Pa`BKiS3
+DEx4 work 16 red_control_unit 0 22 4`AJ9n>^D<[E2eIE_dJe50
+l24
+L18
+VJ>EXN;X@VY21YH59b;J=e2
+!s100 XiN5PJLlX6V_lFDLAkoEH0
 R6
 31
 R37
@@ -212,7 +212,7 @@ R40
 R11
 R12
 Ered_data_mem
-Z41 w1746598466
+Z41 w1746801109
 R14
 R2
 R3
@@ -221,13 +221,13 @@ Z42 8//wsl.localhost/Ubuntu/home/gaith/red/RED_DATA_MEM.vhd
 Z43 F//wsl.localhost/Ubuntu/home/gaith/red/RED_DATA_MEM.vhd
 l0
 L5
-VCHITLaQ>5@AX<LlFa90S33
-!s100 [JEDVnVDe;Fl_3@kETfg^2
+VB`1Mk1aRgEEOET]G^3GW>0
+!s100 3YC::aVI0_F<=Jl]?1YYG1
 R6
 31
-Z44 !s110 1746608459
+Z44 !s110 1746801809
 !i10b 1
-Z45 !s108 1746608458.000000
+Z45 !s108 1746801808.000000
 Z46 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_DATA_MEM.vhd|
 Z47 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_DATA_MEM.vhd|
 !i113 1
@@ -237,11 +237,11 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 12 red_data_mem 0 22 CHITLaQ>5@AX<LlFa90S33
-l24
-L16
-V1YaJ_OL]mkAQ`24^djS4z0
-!s100 ZBAb3Y4=b?nWheoO;lJNQ1
+DEx4 work 12 red_data_mem 0 22 B`1Mk1aRgEEOET]G^3GW>0
+l23
+L15
+VAQ@9jaKKc6maP_4PO[6BC0
+!s100 LK]>z6YSOm2_Qdk`XTcb40
 R6
 31
 R44
@@ -253,7 +253,7 @@ R47
 R11
 R12
 Ered_imm_gen
-Z48 w1746591258
+Z48 w1746800324
 R14
 R2
 R3
@@ -262,15 +262,15 @@ Z49 8//wsl.localhost/Ubuntu/home/gaith/red/RED_IMM_GEN.vhd
 Z50 F//wsl.localhost/Ubuntu/home/gaith/red/RED_IMM_GEN.vhd
 l0
 L5
-VR:mJ:T5PMf9bLgalU5N[?0
-!s100 ]jf1>I2e3HKn<`dzHke];3
+VTA0;4>IP;eF9b]3?1_Kma3
+!s100 6[^e5nSMC37jBi=c<Jk9X0
 R6
 31
-Z51 !s110 1746608462
+!s110 1746801819
 !i10b 1
-Z52 !s108 1746608462.000000
-Z53 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_IMM_GEN.vhd|
-Z54 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_IMM_GEN.vhd|
+Z51 !s108 1746801818.000000
+Z52 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_IMM_GEN.vhd|
+Z53 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_IMM_GEN.vhd|
 !i113 1
 R11
 R12
@@ -278,40 +278,40 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 11 red_imm_gen 0 22 R:mJ:T5PMf9bLgalU5N[?0
-l15
-L13
-VnW0h8CnAQ4K2;kYkf=lfZ0
-!s100 d^lR_WBGAKBjaUOTQ=z4O3
+DEx4 work 11 red_imm_gen 0 22 TA0;4>IP;eF9b]3?1_Kma3
+l23
+L12
+VbO4SY;3`KB0FCNH1I`zb71
+!s100 BXligLhA<CKCkF@@E<RR?2
 R6
 31
-R51
+!s110 1746801820
 !i10b 1
+R51
 R52
 R53
-R54
 !i113 1
 R11
 R12
 Ered_inst_mem
-Z55 w1746607603
+Z54 w1746800957
 R14
 R2
 R3
 R0
-Z56 8//wsl.localhost/Ubuntu/home/gaith/red/RED_INST_MEM.vhd
-Z57 F//wsl.localhost/Ubuntu/home/gaith/red/RED_INST_MEM.vhd
+Z55 8//wsl.localhost/Ubuntu/home/gaith/red/RED_INST_MEM.vhd
+Z56 F//wsl.localhost/Ubuntu/home/gaith/red/RED_INST_MEM.vhd
 l0
-L6
-V@]?TAL=8SkSVm>k5TU>RE1
-!s100 ]j5Bf32IVikc0WBRU^HK50
+L4
+VbXUdN9S_2UX7iUBz@46kz2
+!s100 7>7=K<EH[KkQ@nhA@0`zK3
 R6
 31
-Z58 !s110 1746608454
+Z57 !s110 1746801794
 !i10b 1
-Z59 !s108 1746608454.000000
-Z60 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_INST_MEM.vhd|
-Z61 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_INST_MEM.vhd|
+Z58 !s108 1746801792.000000
+Z59 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_INST_MEM.vhd|
+Z60 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_INST_MEM.vhd|
 !i113 1
 R11
 R12
@@ -319,40 +319,40 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 12 red_inst_mem 0 22 @]?TAL=8SkSVm>k5TU>RE1
-l57
-L14
-VggeEdDZ^S2:aQ]>]Bmo`b3
-!s100 A>Lbk0m91MTP=eA^KX5QL1
+DEx4 work 12 red_inst_mem 0 22 bXUdN9S_2UX7iUBz@46kz2
+l52
+L11
+VA2;Z_CU<H@E9CKmH?4GJC3
+!s100 N4[WC@=bPATCmAG:YK?ej2
 R6
 31
-R37
+R57
 !i10b 1
+R58
 R59
 R60
-R61
 !i113 1
 R11
 R12
 Ered_mux_for_alu_src
-Z62 w1746604977
+Z61 w1746708167
 R14
 R2
 R3
 R0
-Z63 8//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd
-Z64 F//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd
+Z62 8//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd
+Z63 F//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd
 l0
 L5
-V`QL3bQ?<>nB<`kHHoYLF?0
-!s100 2I^4Q6;dN??;G[RVk`kL93
+VXL_S:;XFY?;_2ZS2E3kV?0
+!s100 ^k0:5LhGgKYQ_G3dZV1aa2
 R6
 31
-Z65 !s110 1746608457
+Z64 !s110 1746801803
 !i10b 1
-Z66 !s108 1746608457.000000
-Z67 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd|
-Z68 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd|
+Z65 !s108 1746801801.000000
+Z66 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd|
+Z67 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_ALU_SRC.vhd|
 !i113 1
 R11
 R12
@@ -360,38 +360,38 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 19 red_mux_for_alu_src 0 22 `QL3bQ?<>nB<`kHHoYLF?0
-l16
-L15
-V00Nl0OJM@;Xd1OBXZOJAd3
-!s100 BdC<]_4V2g4;5RXSNLBJ`3
+DEx4 work 19 red_mux_for_alu_src 0 22 XL_S:;XFY?;_2ZS2E3kV?0
+l15
+L14
+VE]`GiPU`SmiXccX<80?X40
+!s100 ih7aQW6a5=oZn<Qin83:n2
 R6
 31
-R65
+R64
 !i10b 1
+R65
 R66
 R67
-R68
 !i113 1
 R11
 R12
 Ered_mux_for_mem_to_reg
-Z69 w1746594787
+Z68 w1746776244
 R14
 R2
 R3
 R0
-Z70 8//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_MEM_TO_REG.vhd
-Z71 F//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_MEM_TO_REG.vhd
+Z69 8//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_MEM_TO_REG.vhd
+Z70 F//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_MEM_TO_REG.vhd
 l0
-L29
-VMHQXniB@3hWIjBDM9PU;]1
-!s100 BbSD2WJG0P4=;:aQ6ZJSC0
+L5
+VRD?;CadMLRb`CjEP]2ZfP0
+!s100 K251;[U?CK?DF6^lfOdBW0
 R6
 31
-Z72 !s110 1746608458
+Z71 !s110 1746801805
 !i10b 1
-R66
+Z72 !s108 1746801803.000000
 Z73 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_MEM_TO_REG.vhd|
 Z74 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_MEM_TO_REG.vhd|
 !i113 1
@@ -401,23 +401,23 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 22 red_mux_for_mem_to_reg 0 22 MHQXniB@3hWIjBDM9PU;]1
-l40
-L39
-V`aFSGfVhD2W_7KiE07^gb3
-!s100 WI2ekF^5iCe4ogHgWSGi:0
+DEx4 work 22 red_mux_for_mem_to_reg 0 22 RD?;CadMLRb`CjEP]2ZfP0
+l15
+L14
+V@VCZH[Ff2FVPoS9^Y^@`:0
+!s100 K=Qnd0OJoYelV4o[CDz_a1
 R6
 31
-R72
+R71
 !i10b 1
-R66
+R72
 R73
 R74
 !i113 1
 R11
 R12
 Ered_mux_for_red_pc
-Z75 w1746597971
+Z75 w1746706680
 R14
 R2
 R3
@@ -425,16 +425,16 @@ R0
 Z76 8//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_RED_PC.vhd
 Z77 F//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_RED_PC.vhd
 l0
-L36
-VKCi?[?fYKc9gY7b=61F491
-!s100 E0F_h=YM=Ce^n1@fkI@C71
+L5
+V3Rz=LC4kHEWkPQGID:TNU2
+!s100 FeU3@lU<GZkA9<5lQY@K<0
 R6
 31
-R72
+Z78 !s110 1746801807
 !i10b 1
-R45
-Z78 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_RED_PC.vhd|
-Z79 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_RED_PC.vhd|
+Z79 !s108 1746801806.000000
+Z80 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_RED_PC.vhd|
+Z81 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_MUX_FOR_RED_PC.vhd|
 !i113 1
 R11
 R12
@@ -442,83 +442,83 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 18 red_mux_for_red_pc 0 22 KCi?[?fYKc9gY7b=61F491
-l47
-L46
-V<4AWFIFjAWGPMhgZ]`;l03
-!s100 T;@]b`oYdJjS<EfVGFaol3
+DEx4 work 18 red_mux_for_red_pc 0 22 3Rz=LC4kHEWkPQGID:TNU2
+l15
+L14
+VThBaHGTLPIKVZe>B@<n@<0
+!s100 `g66a3a0Uj_D2b0F]V:HQ1
 R6
 31
-R72
-!i10b 1
-R45
 R78
+!i10b 1
 R79
+R80
+R81
 !i113 1
 R11
 R12
 Ered_pc
-Z80 w1746589712
-Z81 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z82 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z82 w1746706691
+Z83 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z84 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R2
 R3
 R0
-Z83 8//wsl.localhost/Ubuntu/home/gaith/red/RED_PC.vhd
-Z84 F//wsl.localhost/Ubuntu/home/gaith/red/RED_PC.vhd
+Z85 8//wsl.localhost/Ubuntu/home/gaith/red/RED_PC.vhd
+Z86 F//wsl.localhost/Ubuntu/home/gaith/red/RED_PC.vhd
 l0
 L5
-VFQXZ9`O@:P2aIR849<JZD2
-!s100 mP@>V71l5TEo:@PhgY9hT2
+V>onecZnYzj;bWTX6:LBca3
+!s100 nc``zbY[VfO@FS41A9UCQ2
 R6
 31
-R58
+Z87 !s110 1746801792
 !i10b 1
-R8
-Z85 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_PC.vhd|
-Z86 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_PC.vhd|
+Z88 !s108 1746801790.000000
+Z89 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_PC.vhd|
+Z90 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_PC.vhd|
 !i113 1
 R11
 R12
 Abehavioral
-R81
-R82
+R83
+R84
 R2
 R3
-DEx4 work 6 red_pc 0 22 FQXZ9`O@:P2aIR849<JZD2
-l17
-L13
-VlYZY9gd_7aJ_mzN>OV2Hh0
-!s100 00A>:b]BX41Ml8g6Q76BF3
+DEx4 work 6 red_pc 0 22 >onecZnYzj;bWTX6:LBca3
+l16
+L12
+V7U=^IJen6lodMS4k8BlfO0
+!s100 15T`DIg<_K2a<zPoNnnJG3
 R6
 31
-R58
+R87
 !i10b 1
-R8
-R85
-R86
+R88
+R89
+R90
 !i113 1
 R11
 R12
 Ered_reg1
-Z87 w1746592492
+Z91 w1746793220
 R14
 R2
 R3
 R0
-Z88 8//wsl.localhost/Ubuntu/home/gaith/red/RED_REG1.vhd
-Z89 F//wsl.localhost/Ubuntu/home/gaith/red/RED_REG1.vhd
+Z92 8//wsl.localhost/Ubuntu/home/gaith/red/RED_REG1.vhd
+Z93 F//wsl.localhost/Ubuntu/home/gaith/red/RED_REG1.vhd
 l0
 L6
 V26cLlI7:jVm^g<Df^l7WM3
 !s100 RC3=4zzIILXL<MHz4eB813
 R6
 31
-Z90 !s110 1746608464
+Z94 !s110 1746801826
 !i10b 1
-Z91 !s108 1746608464.000000
-Z92 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_REG1.vhd|
-Z93 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_REG1.vhd|
+Z95 !s108 1746801825.000000
+Z96 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_REG1.vhd|
+Z97 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_REG1.vhd|
 !i113 1
 R11
 R12
@@ -529,37 +529,37 @@ R3
 DEx4 work 8 red_reg1 0 22 26cLlI7:jVm^g<Df^l7WM3
 l25
 L20
-VVl<^CnM]Oj:f1nlKM2FlQ3
-!s100 <9GlTdiEz>UVXchBzSkJ41
+VSiH^3=3[LfZWMSc]8lB[U2
+!s100 ^6Zd4DdT=MD;IVzOXzi332
 R6
 31
-R90
+R94
 !i10b 1
-R91
-R92
-R93
+R95
+R96
+R97
 !i113 1
 R11
 R12
 Ered_reg2
-Z94 w1746000811
+Z98 w1746793218
 R14
 R2
 R3
 R0
-Z95 8//wsl.localhost/Ubuntu/home/gaith/red/RED_REG2.vhd
-Z96 F//wsl.localhost/Ubuntu/home/gaith/red/RED_REG2.vhd
+Z99 8//wsl.localhost/Ubuntu/home/gaith/red/RED_REG2.vhd
+Z100 F//wsl.localhost/Ubuntu/home/gaith/red/RED_REG2.vhd
 l0
 L6
 Vc@1gzL4bzW1^k_N2^ngJG3
 !s100 T2Y2`0Q16SO:@dI0@;`UK0
 R6
 31
-Z97 !s110 1746608465
+Z101 !s110 1746801828
 !i10b 1
-R91
-Z98 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_REG2.vhd|
-Z99 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_REG2.vhd|
+Z102 !s108 1746801827.000000
+Z103 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_REG2.vhd|
+Z104 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_REG2.vhd|
 !i113 1
 R11
 R12
@@ -568,39 +568,39 @@ R14
 R2
 R3
 DEx4 work 8 red_reg2 0 22 c@1gzL4bzW1^k_N2^ngJG3
-l60
+l61
 L44
-Vjcc?j_NVeGTKjR6KZlb223
-!s100 zOYRGd@_:OS9F_hP:<A1N3
+VJ7Q@lJ^B>nlk?z5jL8BBP2
+!s100 =2?fQ4XgIindQ6M5d^SfG3
 R6
 31
-R97
+R101
 !i10b 1
-R91
-R98
-R99
+R102
+R103
+R104
 !i113 1
 R11
 R12
 Ered_reg3
-Z100 w1746000691
+Z105 w1746793221
 R14
 R2
 R3
 R0
-Z101 8//wsl.localhost/Ubuntu/home/gaith/red/RED_REG3.vhd
-Z102 F//wsl.localhost/Ubuntu/home/gaith/red/RED_REG3.vhd
+Z106 8//wsl.localhost/Ubuntu/home/gaith/red/RED_REG3.vhd
+Z107 F//wsl.localhost/Ubuntu/home/gaith/red/RED_REG3.vhd
 l0
 L6
 VUcj;K@U^Y5X=ZWKXNVJ0A1
 !s100 Il6?1?B3WX?I0ZNgbUB3m2
 R6
 31
-R97
+Z108 !s110 1746801830
 !i10b 1
-Z103 !s108 1746608465.000000
-Z104 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_REG3.vhd|
-Z105 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_REG3.vhd|
+Z109 !s108 1746801829.000000
+Z110 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_REG3.vhd|
+Z111 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_REG3.vhd|
 !i113 1
 R11
 R12
@@ -609,39 +609,39 @@ R14
 R2
 R3
 DEx4 work 8 red_reg3 0 22 Ucj;K@U^Y5X=ZWKXNVJ0A1
-l54
+l55
 L40
-VJ?aJcK84HfAFQYaCbe]ZO2
-!s100 ozZVC>z;N<PWU0n2Z@3kL1
+V`zg=jBdUZU:SE5956gmZn2
+!s100 V^6PK10^mfz[YDk73Vk9^1
 R6
 31
-R97
+R108
 !i10b 1
-R103
-R104
-R105
+R109
+R110
+R111
 !i113 1
 R11
 R12
 Ered_register_file
-Z106 w1746591256
+Z112 w1746801675
 R14
 R2
 R3
 R0
-Z107 8//wsl.localhost/Ubuntu/home/gaith/red/RED_REGISTER_FILE.vhd
-Z108 F//wsl.localhost/Ubuntu/home/gaith/red/RED_REGISTER_FILE.vhd
+Z113 8//wsl.localhost/Ubuntu/home/gaith/red/RED_REGISTER_FILE.vhd
+Z114 F//wsl.localhost/Ubuntu/home/gaith/red/RED_REGISTER_FILE.vhd
 l0
 L5
-V^kFk^O3LPH^<h7h?7m2dz0
-!s100 f1n`VTFY_am=FNDN6J;9k2
+VI<gioATk`2iNJhF[HHVLQ1
+!s100 M3KzQbK>T`J3oQj;MHhJF3
 R6
 31
-R30
+!s110 1746801798
 !i10b 1
-R38
-Z109 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_REGISTER_FILE.vhd|
-Z110 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_REGISTER_FILE.vhd|
+Z115 !s108 1746801797.000000
+Z116 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_REGISTER_FILE.vhd|
+Z117 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_REGISTER_FILE.vhd|
 !i113 1
 R11
 R12
@@ -649,40 +649,40 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 17 red_register_file 0 22 ^kFk^O3LPH^<h7h?7m2dz0
-l21
+DEx4 work 17 red_register_file 0 22 I<gioATk`2iNJhF[HHVLQ1
+l33
 L18
-V7T1Teah3QmB_V25GdmjeQ0
-!s100 <njg^Zbo=W4lPUH^lRWXe1
+V]b]IP21]kc]L<`VDk>;1Z1
+!s100 ^oB9i]EmeWMf1Ulfm0o3E0
 R6
 31
-R30
+!s110 1746801799
 !i10b 1
-R38
-R109
-R110
+R115
+R116
+R117
 !i113 1
 R11
 R12
 Ered_sl_by_1
-Z111 w1746591867
+R27
 R14
 R2
 R3
 R0
-Z112 8//wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd
-Z113 F//wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd
+Z118 8//wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd
+Z119 F//wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd
 l0
 L5
-VMWUebIjnNk8XLF9SUIb?N1
-!s100 I==D^XZ?Ahg5nEY8[=l;T2
+V[eVV8P6;S@8O2GQ9hcz`g0
+!s100 MVB02`kCoKB6^@coOSEHB2
 R6
 31
-R7
+Z120 !s110 1746801788
 !i10b 1
-Z114 !s108 1746608452.000000
-Z115 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd|
-Z116 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd|
+Z121 !s108 1746801787.000000
+Z122 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd|
+Z123 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_SL_BY_1.vhd|
 !i113 1
 R11
 R12
@@ -690,83 +690,83 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 11 red_sl_by_1 0 22 MWUebIjnNk8XLF9SUIb?N1
-l14
-L13
-VkU2^aVBQ7mWz5Q466KQSJ3
-!s100 O=JKo:5RH^j_`F<8Bj9dj0
-R6
-31
-R7
-!i10b 1
-R114
-R115
-R116
-!i113 1
-R11
-R12
-Ered_stage1
-Z117 w1746591058
-R81
-R82
-R2
-R3
-R0
-Z118 8//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE1.vhd
-Z119 F//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE1.vhd
-l0
-L5
-VJf8K>h3@RTUaG375AajR?3
-!s100 >[A;_`;<g6`YGPElD@N?g2
-R6
-31
-Z120 !s110 1746608461
-!i10b 1
-R18
-Z121 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE1.vhd|
-Z122 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE1.vhd|
-!i113 1
-R11
-R12
-Abehavioral
-R81
-R82
-R2
-R3
-DEx4 work 10 red_stage1 0 22 Jf8K>h3@RTUaG375AajR?3
-l64
-L22
-V13PPgClJfe[CL[MRXVMLG3
-!s100 KF;=Mf[`1bNA2Te<XeE<20
+DEx4 work 11 red_sl_by_1 0 22 [eVV8P6;S@8O2GQ9hcz`g0
+l13
+L12
+V;=;^UYd<4Y`hKSl@:I6O^1
+!s100 8o96]:5_NQizhiVRdGR120
 R6
 31
 R120
 !i10b 1
-R18
 R121
 R122
+R123
+!i113 1
+R11
+R12
+Ered_stage1
+Z124 w1746790884
+R83
+R84
+R2
+R3
+R0
+Z125 8//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE1.vhd
+Z126 F//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE1.vhd
+l0
+L5
+V5Kga?PhKYBfU3DYPWakR[0
+!s100 MbgT?KT`e@=Kf6F>;fcN02
+R6
+31
+Z127 !s110 1746801816
+!i10b 1
+Z128 !s108 1746801814.000000
+Z129 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE1.vhd|
+Z130 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE1.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R83
+R84
+R2
+R3
+DEx4 work 10 red_stage1 0 22 5Kga?PhKYBfU3DYPWakR[0
+l59
+L21
+V>If0<h66hFd3AeUE5Q:4_0
+!s100 YCG@6T56C^nDOV7VKoz3D2
+R6
+31
+R127
+!i10b 1
+R128
+R129
+R130
 !i113 1
 R11
 R12
 Ered_stage2
-Z123 w1746547968
+Z131 w1746794602
 R14
 R2
 R3
 R0
-Z124 8//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE2.vhd
-Z125 F//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE2.vhd
+Z132 8//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE2.vhd
+Z133 F//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE2.vhd
 l0
 L5
-VC_2BF_9`dn@[=[DR9A:lo1
-!s100 LX8j9RT^Uai[Vgi1INR[F2
+Vn;Z[:5[B1ga9TPa[lD4mj2
+!s100 `9n:DPVh9?UCMY?TQJCdG2
 R6
 31
-R51
+Z134 !s110 1746801818
 !i10b 1
-Z126 !s108 1746608461.000000
-Z127 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE2.vhd|
-Z128 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE2.vhd|
+Z135 !s108 1746801816.000000
+Z136 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE2.vhd|
+Z137 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE2.vhd|
 !i113 1
 R11
 R12
@@ -774,40 +774,40 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 10 red_stage2 0 22 C_2BF_9`dn@[=[DR9A:lo1
-l74
-L34
-VNg6Yb;SS_OI]=H]]X58aa1
-!s100 cTfG?b1i>J064bOfoUf;T2
+DEx4 work 10 red_stage2 0 22 n;Z[:5[B1ga9TPa[lD4mj2
+l70
+L32
+VTbaW2_[f4D1AokaUQ=Lgh1
+!s100 _^OVSh86i;7GhKk?DA]m=3
 R6
 31
-R51
+R134
 !i10b 1
-R126
-R127
-R128
+R135
+R136
+R137
 !i113 1
 R11
 R12
 Ered_stage3
-Z129 w1746548391
+Z138 w1746708158
 R14
 R2
 R3
 R0
-Z130 8//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd
-Z131 F//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd
+Z139 8//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd
+Z140 F//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd
 l0
 L5
-V:SVEHd0ZEZz>8a3AP964o0
-!s100 K8WYCBOmel@o78WYlOTj83
+VMC<OfkmlkXDR:XCkcdak81
+!s100 gAKAiI8iaRm_`ZUPoko0i1
 R6
 31
-Z132 !s110 1746608463
+!s110 1746801821
 !i10b 1
-R52
-Z133 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd|
-Z134 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd|
+Z141 !s108 1746801820.000000
+Z142 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd|
+Z143 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE3.vhd|
 !i113 1
 R11
 R12
@@ -815,40 +815,40 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 10 red_stage3 0 22 :SVEHd0ZEZz>8a3AP964o0
-l88
-L42
-VK^IG^Daz3dN0=7J7imaX;0
-!s100 2z_:=R?jALYFa7mN9?P=U3
+DEx4 work 10 red_stage3 0 22 MC<OfkmlkXDR:XCkcdak81
+l83
+L41
+VcfNBET=O;hD;7b3B`2EQm2
+!s100 P@gd[lZ@enBW>9VE@:S]>2
 R6
 31
-R132
+!s110 1746801822
 !i10b 1
-R52
-R133
-R134
+R141
+R142
+R143
 !i113 1
 R11
 R12
 Ered_stage4
-Z135 w1746548861
+Z144 w1746776217
 R14
 R2
 R3
 R0
-Z136 8//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE4.vhd
-Z137 F//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE4.vhd
+Z145 8//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE4.vhd
+Z146 F//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE4.vhd
 l0
 L5
-Vm^nk@8=XaGlEVMmT7mZ?f0
-!s100 WlbBXJOGz9fXOG>;0jNjg2
+VnK[L01N[IGVcFG<oR0cZ?1
+!s100 :672SI@?0ZgVLAD1jBP7V1
 R6
 31
-R132
+Z147 !s110 1746801824
 !i10b 1
-Z138 !s108 1746608463.000000
-Z139 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE4.vhd|
-Z140 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE4.vhd|
+Z148 !s108 1746801822.000000
+Z149 !s90 -reportprogress|300|-93|-work|work|//wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE4.vhd|
+Z150 !s107 //wsl.localhost/Ubuntu/home/gaith/red/RED_STAGE4.vhd|
 !i113 1
 R11
 R12
@@ -856,18 +856,18 @@ Abehavioral
 R14
 R2
 R3
-DEx4 work 10 red_stage4 0 22 m^nk@8=XaGlEVMmT7mZ?f0
-l56
-L29
-VVEad0zS1X=TI>KBhbBXoR1
-!s100 DSZG4=X9;lL0K:m:KnBj;0
+DEx4 work 10 red_stage4 0 22 nK[L01N[IGVcFG<oR0cZ?1
+l53
+L28
+V1NC5DC3?Vg:^eOUb9Kdl`2
+!s100 ebcMUJXoSRBJC[_hFQ:D=0
 R6
 31
-R90
+R147
 !i10b 1
-R138
-R139
-R140
+R148
+R149
+R150
 !i113 1
 R11
 R12

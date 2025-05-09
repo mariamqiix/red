@@ -51,22 +51,26 @@ architecture Behavioral of RED_REG3 is
     signal next_temp_mem_read      : STD_LOGIC;
     signal next_temp_mem_write     : STD_LOGIC;
     signal next_temp_reg_write_ctrl: STD_LOGIC;
-begin
-    -- Process to store next values in temporary signals
+
+	 begin
+
+ -- Process to store next values in temporary signals
+				 -- Save the current values of next_temp into the output
+			RED_ALU_INPUT_B    <= next_temp_alu_input_b;
+			RED_BRANCH_TARGET  <= next_temp_branch_target;
+			RED_INSTRUCTION_OUT <= next_temp_instruction;
+			RED_ALU_RESULTS    <= next_temp_alu_results;
+			RED_ALU_ZERO       <= next_temp_alu_zero;
+			RED_BRANCH         <= next_temp_branch;
+			RED_MEM_TO_REG     <= next_temp_mem_to_reg;
+			RED_MEM_READ       <= next_temp_mem_read;
+			RED_MEM_WRITE      <= next_temp_mem_write;
+			RED_REG_WRITE_CTRL <= next_temp_reg_write_ctrl;
+			
     process(RED_CLOCK)
     begin
         if rising_edge(RED_CLOCK) then
-            -- Save the current values of next_temp into the output
-            RED_ALU_INPUT_B    <= next_temp_alu_input_b;
-            RED_BRANCH_TARGET  <= next_temp_branch_target;
-            RED_INSTRUCTION_OUT <= next_temp_instruction;
-            RED_ALU_RESULTS    <= next_temp_alu_results;
-            RED_ALU_ZERO       <= next_temp_alu_zero;
-            RED_BRANCH         <= next_temp_branch;
-            RED_MEM_TO_REG     <= next_temp_mem_to_reg;
-            RED_MEM_READ       <= next_temp_mem_read;
-            RED_MEM_WRITE      <= next_temp_mem_write;
-            RED_REG_WRITE_CTRL <= next_temp_reg_write_ctrl;
+
 
             -- Update the next_temp values with the current inputs
             next_temp_alu_input_b  <= Next_RED_ALU_INPUT_B;

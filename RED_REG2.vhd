@@ -57,24 +57,28 @@ architecture Behavioral of RED_REG2 is
     signal next_temp_mem_read    : STD_LOGIC;
     signal next_temp_mem_write   : STD_LOGIC;
     signal next_temp_reg_write_ctrl : STD_LOGIC;
-begin
-    -- Process to store next values in temporary signals
+
+	 begin
+
+		-- Save the current values of next_temp into the output
+		RED_ADDRESS_OUT        <= next_temp_address_out;
+		RED_DATA1              <= next_temp_data1;
+		RED_DATA2              <= next_temp_data2;
+		RED_EXTENDET_IMM       <= next_temp_ext_imm;
+		RED_INSTRUCTION_OUT    <= next_temp_instruction;
+		RED_ALU_OP             <= next_temp_alu_op;
+		RED_ALU_SRC            <= next_temp_alu_src;
+		RED_BRANCH             <= next_temp_branch;
+		RED_MEM_TO_REG         <= next_temp_mem_to_reg;
+		RED_MEM_READ           <= next_temp_mem_read;
+		RED_MEM_WRITE          <= next_temp_mem_write;
+		RED_REG_WRITE_CTRL     <= next_temp_reg_write_ctrl;
+		
+ -- Process to store next values in temporary signals
     process(RED_CLOCK)
     begin
-        if rising_edge(RED_CLOCK) then
-            -- Save the current values of next_temp into the output
-            RED_ADDRESS_OUT        <= next_temp_address_out;
-            RED_DATA1              <= next_temp_data1;
-            RED_DATA2              <= next_temp_data2;
-            RED_EXTENDET_IMM       <= next_temp_ext_imm;
-            RED_INSTRUCTION_OUT    <= next_temp_instruction;
-            RED_ALU_OP             <= next_temp_alu_op;
-            RED_ALU_SRC            <= next_temp_alu_src;
-            RED_BRANCH             <= next_temp_branch;
-            RED_MEM_TO_REG         <= next_temp_mem_to_reg;
-            RED_MEM_READ           <= next_temp_mem_read;
-            RED_MEM_WRITE          <= next_temp_mem_write;
-            RED_REG_WRITE_CTRL     <= next_temp_reg_write_ctrl;
+        if RED_CLOCK = '1' then
+
 
             -- Update the next_temp values with the current inputs
             next_temp_address_out  <= Next_RED_ADDRESS_OUT;

@@ -4,7 +4,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RED_MUX_FOR_ALU_SRC is
     Port (
-        RED_CLOCK     : in STD_LOGIC;
         RED_SELECT    : in  STD_LOGIC;
         RED_INPUT_A   : in  STD_LOGIC_VECTOR(31 downto 0);  -- ReadData2
         RED_INPUT_B   : in  STD_LOGIC_VECTOR(31 downto 0);  -- Immediate
