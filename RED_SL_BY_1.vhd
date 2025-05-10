@@ -11,5 +11,5 @@ end RED_SL_BY_1;
 
 architecture Behavioral of RED_SL_BY_1 is
 begin
- RED_OUTPUT <= std_logic_vector(shift_left(unsigned(RED_INPUT), 2));
+ RED_OUTPUT <= std_logic_vector(shift_left(unsigned(RED_INPUT), 1));
 end Behavioral;
