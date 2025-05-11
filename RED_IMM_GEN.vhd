@@ -18,7 +18,6 @@ architecture Behavioral of RED_IMM_GEN is
     signal RED_IMM_SB_TYPE    : STD_LOGIC_VECTOR(12 downto 0);
     signal RED_IMM_U_TYPE     : STD_LOGIC_VECTOR(19 downto 0);
     signal RED_IMM_UJ_TYPE    : STD_LOGIC_VECTOR(20 downto 0);
-
     signal RED_RESULT_SIGNED  : SIGNED(63 downto 0);
 begin
     -- Extract fields
@@ -37,8 +36,6 @@ begin
 --        variable v_rs1   : signed(63 downto 0);
         variable v_imm   : signed(63 downto 0);
     begin
---        v_rs1 := resize(signed('0' & RED_RS1), 64);  -- RS1 is unsigned 5-bit, pad with 0 to prevent sign extension
-
         case RED_OPCODE is
             -- I-type: imm + rs1
             when "0000011" | "0010011" | "1100111" =>
@@ -56,7 +53,7 @@ begin
 
             -- U-type: immediate shifted by 12
             when "0110111" | "0010111" =>
-                v_imm := resize(signed(RED_IMM_U_TYPE & x"000"), 64);  -- Treat upper 20 bits as signed, lower 12 as 0s
+                v_imm := resize(signed(RED_IMM_U_TYPE & x"000"), 64);  
                 RED_RESULT_SIGNED <= v_imm;
 
             -- UJ-type: jump immediate

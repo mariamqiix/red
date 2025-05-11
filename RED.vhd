@@ -90,6 +90,7 @@ architecture Behavioral of RED is
     component RED_STAGE4 is
         Port (
             -- Inputs from Stage 3
+		      RED_CLOCK        : in STD_LOGIC;
             RED_MEM_TO_REG_IN      : in  STD_LOGIC;
             RED_MEM_READ_IN        : in  STD_LOGIC;
             RED_MEM_WRITE_IN       : in  STD_LOGIC;
@@ -297,7 +298,7 @@ REG1 : RED_REG1  Port map (
 		 
 STAGE2 : RED_STAGE2 port map ( 
 				 -- Inputs
-            RED_CLOCK         => RED_CLOCK,
+            RED_CLOCK          => RED_CLOCK,
             RED_INSTRUCTION 	 => RED_STAGE2_INPUT_RED_INSTRUCTION,
             RED_ADDRESS    	 => RED_STAGE2_INPUT_RED_ADDRESS,
             RED_WRITE_DATA   	 => RED_STAGE2_INPUT_RED_WRITE_DATA ,
@@ -406,6 +407,7 @@ REG3 : RED_REG3 port map(
 );
 
 STAGE4 : RED_STAGE4 port map(
+    RED_CLOCK          => RED_CLOCK,
     RED_MEM_TO_REG_IN        => RED_STAGE4_INPUT_RED_MEM_TO_REG_IN,
     RED_MEM_READ_IN          => RED_STAGE4_INPUT_RED_MEM_READ_IN,
     RED_MEM_WRITE_IN         => RED_STAGE4_INPUT_RED_MEM_WRITE_IN,

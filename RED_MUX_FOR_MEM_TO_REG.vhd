@@ -20,11 +20,3 @@ begin
                       (others => '0') when others;
 end Behavioral;
 
---architecture Behavioral of RED_MUX_FOR_MEM_TO_REG is
---begin
---    -- Concurrent signal assignment using "with-select"
---    with RED_SELECT select
---        RED_OUTPUT <= RED_ALU_RESULTS when '0',
---                      RED_MEM_DATA    when '1',
---                      (others => '0') when others;
---end Behavioral;

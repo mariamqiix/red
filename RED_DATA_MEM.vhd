@@ -4,6 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity RED_DATA_MEM is
     Port (
+		  RED_CLOCK        : in STD_LOGIC;
         RED_MEM_WRITE   : in  STD_LOGIC;
         RED_MEM_READ    : in  STD_LOGIC;
         RED_ADDRESS     : in  STD_LOGIC_VECTOR(31 downto 0);
@@ -24,10 +25,12 @@ begin
     RED_ADDR_INDEX <= to_integer(unsigned(RED_ADDRESS(7 downto 0)));
 
     -- Memory write (unclocked, NOT recommended for synthesis)
-    process(RED_MEM_WRITE, RED_ADDR_INDEX, RED_WRITE_DATA)
+    process(RED_MEM_WRITE, RED_ADDR_INDEX,RED_CLOCK, RED_WRITE_DATA)
     begin
+			if rising_edge(RED_CLOCK) then 
         if RED_MEM_WRITE = '1' then
             RED_RAM(RED_ADDR_INDEX) <= RED_WRITE_DATA;
+				end if;
         end if;
     end process;
 

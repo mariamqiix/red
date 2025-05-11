@@ -18,3 +18,4 @@ begin
                       RED_INPUT_B when '1',
                       (others => '0') when others;
 end Behavioral;
+

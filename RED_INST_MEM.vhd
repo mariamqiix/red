@@ -37,13 +37,13 @@ architecture Behavioral of RED_INST_MEM is
 		6 => x"40428333", -- funct7: 0100000
 
 		-- beq x6, x0, +4 => should not branch if x6 != 0
-		7 => x"fe000ee3", -- funct3: 000, opcode: 1100011, imm=+8 (offset = 2 instructions)
+		8 => x"fe000ee3", -- funct3: 000, opcode: 1100011, imm=+8 (offset = 2 instructions)
 
 		-- add x7, x6, x1 => skipped if branch taken
-		8 => x"001303b3", 
+		9 => x"001303b3", 
 
 		-- nop (add x0, x0, x0)
-		9 => x"00000033", 
+		7 => x"00000033", 
 
 		others => (others => '0')
 	);
@@ -51,7 +51,6 @@ architecture Behavioral of RED_INST_MEM is
 
 begin
 	instruction_reg <= RED_MEM(to_integer(unsigned(RED_ADDRESS)));
-
 	RED_INSTRUCTION <= instruction_reg;
- 
+
 end Behavioral;

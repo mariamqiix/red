@@ -35,11 +35,9 @@ begin
 	-- Write Process (Synchronous to RED_CLOCK)
 	process(RED_CLOCK)
 	begin
---		if rising_edge(RED_CLOCK) then
-			if RED_REG_WRITE = '1' then
+		if rising_edge(RED_CLOCK) then
 				RED_REGISTER(to_integer(unsigned(RED_WRITE_REG))) <= RED_WRITE_DATA;
 			end if;
---		end if;
 	end process;
 
 	-- Read Ports (Asynchronous)

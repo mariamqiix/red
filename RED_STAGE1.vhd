@@ -37,7 +37,7 @@ architecture Behavioral of RED_STAGE1 is
 
     component RED_INST_MEM
         Port (
-            RED_ADDRESS     : in  STD_LOGIC_VECTOR(7 downto 0);  -- Only 8-bit address input
+            RED_ADDRESS     : in  STD_LOGIC_VECTOR(7 downto 0);  -- Only 8-bit 
             RED_INSTRUCTION : out STD_LOGIC_VECTOR(31 downto 0)
         );
     end component;
@@ -54,7 +54,6 @@ architecture Behavioral of RED_STAGE1 is
     -- Internal signals
     signal selected_input         : STD_LOGIC_VECTOR(63 downto 0);
     signal internal_red_address   : STD_LOGIC_VECTOR(63 downto 0);
---	 signal RED_SIGNAL_PC_P4       : STD_LOGIC_VECTOR(63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
 
 begin
 
