@@ -27,8 +27,8 @@ architecture Behavioral of RED_INST_MEM is
 		-- and x4, x2, x3 => x4 = 0
 		3 => x"00317233", -- funct3: 111
 
-		-- sd x4, 0(x0) => store x4 to mem[0]
-		1 => x"00403023", -- funct3: 011, opcode: 0100011
+		-- sd x4, 5(x0) => store x4 to mem[0]
+		1 => x"004032a3", -- funct3: 011, opcode: 0100011
 
 		-- ld x5, 0(x0) => load mem[0] to x5
 		2 => x"00003283", -- funct3: 011, opcode: 0000011
@@ -37,7 +37,7 @@ architecture Behavioral of RED_INST_MEM is
 		6 => x"40428333", -- funct7: 0100000
 
 		-- beq x6, x0, +4 => should not branch if x6 != 0
-		7 => x"00030263", -- funct3: 000, opcode: 1100011, imm=+8 (offset = 2 instructions)
+		7 => x"fe000ee3", -- funct3: 000, opcode: 1100011, imm=+8 (offset = 2 instructions)
 
 		-- add x7, x6, x1 => skipped if branch taken
 		8 => x"001303b3", 

@@ -22,8 +22,8 @@ begin
     with RED_ALU_CTRL select
         RED_TEMP_ALU_RESULTS <=
             "00000000000000000000000000000000"                                         when "0000",  -- Clear
-            std_logic_vector(unsigned(RED_INPUT_A) - unsigned(RED_INPUT_B))            when "0001",  -- Sub
-            std_logic_vector(unsigned(RED_INPUT_A) + unsigned(RED_INPUT_B))            when "0010",  -- Add
+            std_logic_vector(signed(RED_INPUT_A) - signed(RED_INPUT_B))            when "0001",  -- Sub
+            std_logic_vector(signed(RED_INPUT_A) + signed(RED_INPUT_B))            when "0010",  -- Add
             std_logic_vector(RED_MULT_RESULT(31 downto 0))                             when "0011",  -- Mult (low)
             std_logic_vector(signed(RED_INPUT_A) / signed(RED_INPUT_B))                when "0100",  -- Div
             std_logic_vector(signed(RED_INPUT_A) mod signed(RED_INPUT_B))              when "0101",  -- Mod

@@ -28,6 +28,7 @@ architecture Behavioral of RED_REGISTER_FILE is
 		 7  => x"77777777",  -- Register 7
 		 8  => x"88888888",  -- Register 8
 		 9  => x"99999999",  -- Register 9
+		 
 		 others => (others => '0')  -- All other registers set to 0
 	);
 begin

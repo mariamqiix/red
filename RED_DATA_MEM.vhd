@@ -18,8 +18,6 @@ architecture Behavioral of RED_DATA_MEM is
     signal RED_RAM : RED_MEM_ARRAY := (others => (others => '0'));
     signal RED_ADDR_INDEX : integer range 0 to 255;
 
-    signal RED_DATA_TMP : STD_LOGIC_VECTOR(31 downto 0);
-
 begin
 
     -- Address decoding logic

@@ -14,6 +14,6 @@ architecture Behavioral of RED_ADDER_FOR_BRANCH is
     signal RED_BRANCH_RESULT : STD_LOGIC_VECTOR(63 downto 0);
 begin
 
-            RED_BRANCH_RESULT <= std_logic_vector(unsigned(RED_PC) + unsigned(RED_OFFSET));
+            RED_BRANCH_RESULT <= std_logic_vector(signed(RED_PC) + signed(RED_OFFSET));
     RED_BRANCH_ADDER <= RED_BRANCH_RESULT;
 end Behavioral;
